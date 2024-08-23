@@ -1,35 +1,31 @@
-<h2>Sign up</h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<%# app/views/devise/registrations/new.html.erb %>
+
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :post }) do |f| %>
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label :email %>
     <%= f.email_field :email, autofocus: true %>
   </div>
 
   <div class="field">
     <%= f.label :password %>
-    <% if @minimum_password_length %>
-      <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
+    <%= f.label :password_confirmation %>
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
-<% end %>
 
-<%= render "devise/shared/links" %>
-
-<%# The code below checks if the user already exists and, if so, shows the "Only Verification Remain" button %>
-<% if params[:user].present? && User.exists?(email: params[:user][:email]) %>
-  <%= button_to 'Only Verification Remain', resend_otp_path(email: params[:user][:email]), method: :post %>
+  <% if User.exists?(email: f.object.email) && !User.find_by(email: f.object.email).verified? %>
+    <%= button_to 'Only Verification Remain', resend_otp_path(email: f.object.email), method: :post %>
+  <% end %>
 <% end %>
 

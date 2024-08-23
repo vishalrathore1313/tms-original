@@ -5,10 +5,19 @@ Rails.application.routes.draw do
     registrations: 'users/registrations'
   }
 
+  devise_scope :user do
+
   post 'verify_otp', to: 'users/registrations#verify_otp',as: 'verify_otp'
+
+  get 'otp_verification', to: 'users/registrations#otp_verification',as: :otp_verification
+
   post 'resend_otp', to: 'users/registrations#resend_otp',as: 'resend_otp'
 
+  end
+
   root 'home#index' # Adjust to your actual root path
+
+
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
