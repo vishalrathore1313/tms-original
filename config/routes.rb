@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'home/index'
 
 
   devise_for :users, controllers: {
@@ -6,6 +7,9 @@ Rails.application.routes.draw do
   }
 
   devise_scope :user do
+
+  # root 'devise/sessions#new' 
+  # root 'home#index' 
 
   post 'verify_otp', to: 'users/registrations#verify_otp',as: 'verify_otp'
 
@@ -15,7 +19,14 @@ Rails.application.routes.draw do
 
   end
 
-  root 'home#index' # Adjust to your actual root path
+
+  root 'projects#index'
+ 
+  resources :projects do
+      resources :tasks
+  end  
+
+
 
 
 

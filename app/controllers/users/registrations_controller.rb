@@ -18,8 +18,15 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # Custom action for OTP verification
   def verify_otp
     @user = User.find_by(email: session[:otp_email])
-    # @user.update(verification: true)
+    @user.update(verification: true)
+
+
+    puts "store in c #{@user.otp_code}"
+
+    puts "submitted in c#{params[:otp_code]}"
+
     if @user&.verify_otp(params[:otp_code])
+      
       @user.update(verification: true)
       sign_in(@user)
       session.delete(:otp_email) # Clear session data

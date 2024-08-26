@@ -10,6 +10,12 @@ gem 'devise'
 
 gem "dotenv-rails", group:[:development, :test]
 
+gem 'bootstrap', '~>5.3'
+
+gem 'sassc-rails'
+
+# gem 'bootstrap-sass'
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 

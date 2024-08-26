@@ -1,9 +1,23 @@
- <%# app/views/users/registrations/otp_verification.html.erb %>
- 
-<%= form_with url: verify_otp_path, method: :post do |f| %>
-  <%= f.hidden_field :email, value: session[:otp_email] %>
-  <%= f.label :otp_code, "Enter OTP" %>
-  <%= f.text_field :otp_code %>
-  <%= f.submit "Verify OTP" %>
-<% end %>
+<%# app/views/users/registrations/otp_verification.html.erb %>
+
+<div class="d-flex justify-content-center align-items-center vh-100" style="background-color: #fff;">
+  <div class="card bg-light" style="width: 100%; max-width: 500px;">
+    <div class="card-body">
+      <h2 class="text-center">OTP Verification</h2>
+
+      <%= form_with url: verify_otp_path, method: :post do |f| %>
+        <%= f.hidden_field :email, value: session[:otp_email] %>
+
+        <div class="form-group">
+          <%= f.label :otp_code, "Enter OTP" %>
+          <%= f.text_field :otp_code, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= f.submit "Verify OTP", class: 'btn btn-primary btn-block' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
 

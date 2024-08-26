@@ -1,0 +1,28 @@
+
+
+
+<h1>Projects</h1>
+
+
+<%= form_with(model: @project) do |f| %>
+
+  <div class="form-group">
+    <%= f.label :title, 'Project Title' %>
+    <%= f.text_field :title, class: 'form-control' %>
+  </div>
+
+  <%= f.submit 'Create New Project', class: 'btn btn-primary' %>
+<% end %>
+
+
+
+<ul class="mt-4">
+  <% @projects.each do |project| %>
+    <li>
+      <%= link_to project.title, project_path(project) %>
+    </li>
+  <% end %>
+</ul>
+
+
+
