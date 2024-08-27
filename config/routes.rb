@@ -23,11 +23,13 @@ Rails.application.routes.draw do
   root 'projects#index'
  
   resources :projects do
-      resources :tasks
-  end  
-
-
-
+      resources :tasks do
+        member do
+          patch :update_status
+        end
+      end  
+    end
+  
 
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

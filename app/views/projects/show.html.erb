@@ -1,35 +1,149 @@
+
+
 <h1>Tasks for <%= @project.title %></h1>
 
-<%= form_with(model: [@project, @project.tasks.build], local: true) do |f| %>
-  <div class="form-group">
-    <%= f.label :title, 'Task Title' %>
-    <%= f.text_field :title, class: 'form-control' %>
-  </div>
+<div class="container">
+  <!-- Task Creation Form -->
+  <%= form_with(model: [@project, @project.tasks.build], local: true) do |f| %>
+    <div class="form-group">
+      <%= f.label :title, 'Task Title' %>
+      <%= f.text_field :title, class: 'form-control' %>
+    </div>
 
-  <div class="form-group">
-    <%= f.label :description, 'Task Description' %>
-    <%= f.text_area :description, class: 'form-control' %>
-  </div>
+    <div class="form-group">
+      <%= f.label :description, 'Task Description' %>
+      <%= f.text_area :description, class: 'form-control' %>
+    </div>
 
-  <div class="form-group">
-    <%= f.label :status, 'Task Status' %>
-    <%= f.select :status, Task.statuses.keys.map { |status| [status.humanize, status] }, {}, class: 'form-control' %>
-  </div>
+    <div class="form-group">
+      <%= f.label :status, 'Task Status' %>
+      <%= f.select :status, Task.statuses.keys.map { |status| [status.humanize, status] }, {}, class: 'form-control' %>
+    </div>
 
-  <%= f.submit 'Add Task', class: 'btn btn-primary' %>
-  <%= link_to 'List',project_tasks_path(@project), class: 'btn btn-primary'%>
-<% end %>
-
-<h2>Existing Tasks</h2>
-
-<ul>
-  <% @project.tasks.each do |task| %>
-    <li>
-      <strong>Title:</strong> <%= task.title %> <br>
-      <strong>Description:</strong> <%= task.description %> <br>
-      <strong>Status:</strong> <%= task.status %>
-      <%# <%= link_to 'Edit', edit_project_task_path(@project, task), class: 'btn btn-secondary btn-sm' %>
-    </li>
+    <%= f.submit 'Add Task', class: 'btn btn-primary' %>
+    <%= link_to 'List', project_tasks_path(@project), class: 'btn btn-secondary' %>
   <% end %>
-</ul>
 
+
+<div class="task-list" data-status="backlog">
+  <h3>Backlog</h3>
+  <% @project.tasks.where(status: 'backlog').each do |task| %>
+    <div class="task-card" data-task-id="<%= task.id %>" data-project-id="<%= task.project_id %>" draggable="true">
+      <p><%= task.title %></p>
+      <p><%= task.description %></p>
+    </div>
+  <% end %>
+</div>
+
+<div class="task-list" data-status="in_progress">
+  <h3>In Progress</h3>
+  <% @project.tasks.where(status: 'in_progress').each do |task| %>
+    <div class="task-card" data-task-id="<%= task.id %>" data-project-id="<%= task.project_id %>" draggable="true">
+      <p><%= task.title %></p>
+      <p><%= task.description %></p>
+    </div>
+  <% end %>
+</div>
+
+<div class="task-list" data-status="completed">
+  <h3>Completed</h3>
+  <% @project.tasks.where(status: 'completed').each do |task| %>
+    <div class="task-card" data-task-id="<%= task.id %>" 
+    data-project-id="<%= task.project_id %>" draggable="true">
+      <p><%= task.title %></p>
+      <p><%= task.description %></p>
+    </div>
+  <% end %>
+</div>
+
+<!-- Add the JavaScript for Drag and Drop -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+  const taskCards = document.querySelectorAll('.task-card');
+  const taskLists = document.querySelectorAll('.task-list');
+
+  // Set up drag start event for each task card
+  taskCards.forEach(card => {
+    card.addEventListener('dragstart', event => {
+      event.target.classList.add('dragging');
+      event.dataTransfer.setData('text/plain', event.target.dataset.taskId);
+    });
+
+    card.addEventListener('dragend', event => {
+      event.target.classList.remove('dragging');
+    });
+  });
+
+  // Set up drag over and drop events for each task list (column)
+  taskLists.forEach(list => {
+    list.addEventListener('dragover', event => {
+      event.preventDefault();
+    });
+
+    list.addEventListener('drop', event => {
+      event.preventDefault();
+      const taskId = event.dataTransfer.getData('text/plain');
+      const taskCard = document.querySelector(`[data-task-id="${taskId}"]`);
+
+      if (taskCard) {
+        // Append the task card to the new status list (column)
+        list.appendChild(taskCard);
+
+        // Update the task status in the database via AJAX
+        const newStatus = list.dataset.status; // Get the new status from the drop target's data-status attribute
+        const projectId = taskCard.dataset.projectId; // Assume each task card has a data-project-id attribute
+
+        updateTaskStatus(projectId, taskId, newStatus);
+      }
+    });
+  });
+
+  // Function to update the task status via AJAX
+  function updateTaskStatus(projectId, taskId, newStatus) {
+    fetch(`/projects/${projectId}/tasks/${taskId}/update_status`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRF-Token': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+      },
+      body: JSON.stringify({ status: newStatus })
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (!data.success) {
+        alert('Failed to update task status.');
+      }
+    })
+    .catch(error => console.error('Error:', error));
+  }
+});
+
+
+</script>
+
+
+
+
+<!-- CSS Styling -->
+<style>
+  .task-list {
+    border: 1px solid #ccc;
+    min-height: 200px;
+    padding: 10px;
+    background-color: grey;
+    border-radius: 5px;
+  }
+
+  .task-card {
+    background-color: white;
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: grab;
+  }
+
+  .task-card.dragging {
+    opacity: 0.5;
+  }
+</style>

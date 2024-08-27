@@ -7,6 +7,9 @@ class ProjectsController < ApplicationController
   def show
     @project = Project.find(params[:id])
     @tasks = @project.tasks
+    @tasks = @project.tasks.where(status: 'Backlog')
+    @tasks = @project.tasks.where(status: 'Backlog')
+    @tasks = @project.tasks.where(status: 'Backlog')
   end
 
   def new
