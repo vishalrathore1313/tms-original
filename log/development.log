@@ -22232,3 +22232,329 @@ Processing by ProjectsController#show as HTML
 Completed 200 OK in 28ms (Views: 16.0ms | ActiveRecord: 0.8ms | Allocations: 9526)
 
 
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /home/rails/tms_project/tms28aug/config/environment.rb:5)
+Started GET "/projects/9" for 127.0.0.1 at 2024-08-28 10:48:52 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 9], ["status", "Backlog"]]
+  ↳ app/views/projects/show.html.erb:30
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 9], ["status", "In_progress"]]
+  ↳ app/views/projects/show.html.erb:40
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 9], ["status", "Completed"]]
+  ↳ app/views/projects/show.html.erb:50
+  Rendered projects/show.html.erb within layouts/application (Duration: 29.7ms | Allocations: 46363)
+  Rendered layout layouts/application.html.erb (Duration: 103.8ms | Allocations: 92570)
+Completed 200 OK in 324ms (Views: 109.0ms | ActiveRecord: 3.2ms | Allocations: 271268)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2024-08-28 10:48:55 +0530
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 10ms (ActiveRecord: 0.2ms | Allocations: 1882)
+
+
+Started GET "/" for 127.0.0.1 at 2024-08-28 10:48:58 +0530
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:20
+  Rendered projects/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1253)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 5694)
+Completed 200 OK in 13ms (Views: 10.5ms | ActiveRecord: 0.2ms | Allocations: 7347)
+
+
+Started GET "/" for 127.0.0.1 at 2024-08-28 10:49:37 +0530
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:65
+  Rendered projects/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1767)
+  Rendered layout layouts/application.html.erb (Duration: 18.8ms | Allocations: 22219)
+Completed 200 OK in 39ms (Views: 20.4ms | ActiveRecord: 2.4ms | Allocations: 35710)
+
+
+Started GET "/" for 127.0.0.1 at 2024-08-28 10:49:59 +0530
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:65
+  Rendered projects/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1748)
+  Rendered layout layouts/application.html.erb (Duration: 18.8ms | Allocations: 22201)
+Completed 200 OK in 39ms (Views: 20.3ms | ActiveRecord: 2.4ms | Allocations: 35678)
+
+
+Started GET "/" for 127.0.0.1 at 2024-08-28 10:50:58 +0530
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:65
+  Rendered projects/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1830)
+  Rendered layout layouts/application.html.erb (Duration: 19.2ms | Allocations: 22487)
+Completed 200 OK in 39ms (Views: 20.7ms | ActiveRecord: 2.4ms | Allocations: 36047)
+
+
+Started GET "/" for 127.0.0.1 at 2024-08-28 10:51:55 +0530
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:65
+  Rendered projects/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1829)
+  Rendered layout layouts/application.html.erb (Duration: 19.4ms | Allocations: 22476)
+Completed 200 OK in 39ms (Views: 20.9ms | ActiveRecord: 2.5ms | Allocations: 35975)
+
+
+Started GET "/projects/9" for 127.0.0.1 at 2024-08-28 10:52:06 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 9], ["status", "Backlog"]]
+  ↳ app/views/projects/show.html.erb:30
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 9], ["status", "In_progress"]]
+  ↳ app/views/projects/show.html.erb:40
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 9], ["status", "Completed"]]
+  ↳ app/views/projects/show.html.erb:50
+  Rendered projects/show.html.erb within layouts/application (Duration: 9.8ms | Allocations: 7270)
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 11707)
+Completed 200 OK in 28ms (Views: 15.3ms | ActiveRecord: 1.0ms | Allocations: 18854)
+
+
+Started GET "/projects/9" for 127.0.0.1 at 2024-08-28 10:52:14 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  [1m[36mProject Load (0.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 9], ["status", "Backlog"]]
+  ↳ app/views/projects/show.html.erb:30
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 9], ["status", "In_progress"]]
+  ↳ app/views/projects/show.html.erb:40
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 9], ["status", "Completed"]]
+  ↳ app/views/projects/show.html.erb:50
+  Rendered projects/show.html.erb within layouts/application (Duration: 4.5ms | Allocations: 2726)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 7163)
+Completed 200 OK in 14ms (Views: 10.1ms | ActiveRecord: 0.3ms | Allocations: 9533)
+
+
+Started POST "/projects" for 127.0.0.1 at 2024-08-28 10:53:00 +0530
+Processing by ProjectsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "project"=>{"title"=>"whatsapp"}, "commit"=>"Create New Project"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/projects_controller.rb:21:in `create'
+  [1m[36mProject Create (1.1ms)[0m  [1m[32mINSERT INTO "projects" ("title", "created_at", "updated_at") VALUES (?, ?, ?) RETURNING "id"[0m  [["title", "whatsapp"], ["created_at", "2024-08-28 05:23:00.119089"], ["updated_at", "2024-08-28 05:23:00.119089"]]
+  ↳ app/controllers/projects_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/projects_controller.rb:21:in `create'
+Redirected to http://localhost:3000/projects/10
+Completed 302 Found in 9ms (ActiveRecord: 2.6ms | Allocations: 4550)
+
+
+Started GET "/projects/10" for 127.0.0.1 at 2024-08-28 10:53:00 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 10], ["status", "Backlog"]]
+  ↳ app/views/projects/show.html.erb:30
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 10], ["status", "In_progress"]]
+  ↳ app/views/projects/show.html.erb:40
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 10], ["status", "Completed"]]
+  ↳ app/views/projects/show.html.erb:50
+  Rendered projects/show.html.erb within layouts/application (Duration: 4.6ms | Allocations: 2625)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 7062)
+Completed 200 OK in 15ms (Views: 10.9ms | ActiveRecord: 0.3ms | Allocations: 9429)
+
+
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /home/rails/tms_project/tms28aug/config/environment.rb:5)
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" /* loading for pp */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mProject Destroy (0.5ms)[0m  [1m[31mDELETE FROM "projects" WHERE "projects"."id" = ?[0m  [["id", 10]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" /* loading for pp */ LIMIT ?[0m  [["LIMIT", 11]]
+Started POST "/projects" for 127.0.0.1 at 2024-08-28 10:56:53 +0530
+Processing by ProjectsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "project"=>{"title"=>"Whatsapp"}, "commit"=>"Create New Project"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/projects_controller.rb:21:in `create'
+  [1m[36mProject Create (0.9ms)[0m  [1m[32mINSERT INTO "projects" ("title", "created_at", "updated_at") VALUES (?, ?, ?) RETURNING "id"[0m  [["title", "Whatsapp"], ["created_at", "2024-08-28 05:26:53.330818"], ["updated_at", "2024-08-28 05:26:53.330818"]]
+  ↳ app/controllers/projects_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/projects_controller.rb:21:in `create'
+Redirected to http://localhost:3000/projects/11
+Completed 302 Found in 21ms (ActiveRecord: 3.0ms | Allocations: 14657)
+
+
+Started GET "/projects/11" for 127.0.0.1 at 2024-08-28 10:56:53 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 11], ["status", "Backlog"]]
+  ↳ app/views/projects/show.html.erb:30
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 11], ["status", "In_progress"]]
+  ↳ app/views/projects/show.html.erb:40
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 11], ["status", "Completed"]]
+  ↳ app/views/projects/show.html.erb:50
+  Rendered projects/show.html.erb within layouts/application (Duration: 8.7ms | Allocations: 7213)
+  Rendered layout layouts/application.html.erb (Duration: 33.8ms | Allocations: 27764)
+Completed 200 OK in 47ms (Views: 35.5ms | ActiveRecord: 0.8ms | Allocations: 35714)
+
+
+Started POST "/projects/11/tasks" for 127.0.0.1 at 2024-08-28 10:57:36 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "task"=>{"title"=>"Chat interface", "description"=>"Make a chat interface", "status"=>"backlog"}, "commit"=>"Add Task", "project_id"=>"11"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  [1m[36mProject Load (0.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:39:in `set_project'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:11:in `create'
+  [1m[36mTask Create (0.8ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "description", "status", "project_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "Chat interface"], ["description", "Make a chat interface"], ["status", "Backlog"], ["project_id", 11], ["created_at", "2024-08-28 05:27:36.741079"], ["updated_at", "2024-08-28 05:27:36.741079"]]
+  ↳ app/controllers/tasks_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:11:in `create'
+Redirected to http://localhost:3000/projects/11
+Completed 302 Found in 8ms (ActiveRecord: 1.1ms | Allocations: 4366)
+
+
+Started GET "/projects/11" for 127.0.0.1 at 2024-08-28 10:57:36 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  [1m[36mProject Load (0.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 11], ["status", "Backlog"]]
+  ↳ app/views/projects/show.html.erb:30
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 11], ["status", "In_progress"]]
+  ↳ app/views/projects/show.html.erb:40
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 11], ["status", "Completed"]]
+  ↳ app/views/projects/show.html.erb:50
+  Rendered projects/show.html.erb within layouts/application (Duration: 5.4ms | Allocations: 2682)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 7212)
+Completed 200 OK in 15ms (Views: 11.0ms | ActiveRecord: 0.5ms | Allocations: 9585)
+
+
+Started GET "/" for 127.0.0.1 at 2024-08-28 10:57:40 +0530
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:65
+  Rendered projects/index.html.erb within layouts/application (Duration: 8.4ms | Allocations: 1756)
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | Allocations: 6190)
+Completed 200 OK in 27ms (Views: 18.1ms | ActiveRecord: 0.4ms | Allocations: 7831)
+
+
+Started GET "/projects/11" for 127.0.0.1 at 2024-08-28 10:57:53 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 11], ["status", "Backlog"]]
+  ↳ app/views/projects/show.html.erb:30
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 11], ["status", "In_progress"]]
+  ↳ app/views/projects/show.html.erb:40
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 11], ["status", "Completed"]]
+  ↳ app/views/projects/show.html.erb:50
+  Rendered projects/show.html.erb within layouts/application (Duration: 7.9ms | Allocations: 2662)
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 7102)
+Completed 200 OK in 28ms (Views: 15.6ms | ActiveRecord: 0.7ms | Allocations: 9459)
+
+
+Started PATCH "/projects/11/tasks/24/update_status" for 127.0.0.1 at 2024-08-28 10:57:55 +0530
+Processing by TasksController#update_status as */*
+  Parameters: {"status"=>"in_progress", "project_id"=>"11", "id"=>"24", "task"=>{"status"=>"in_progress"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:39:in `set_project'
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["project_id", 11], ["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:43:in `set_task'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:28:in `update_status'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:29:in `update_status'
+  [1m[36mTask Update (1.3ms)[0m  [1m[33mUPDATE "tasks" SET "status" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["status", "In_progress"], ["updated_at", "2024-08-28 05:27:55.479064"], ["id", 24]]
+  ↳ app/controllers/tasks_controller.rb:29:in `update_status'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:29:in `update_status'
+Completed 200 OK in 14ms (Views: 0.2ms | ActiveRecord: 2.4ms | Allocations: 5871)
+
+
+Started GET "/projects/11/tasks" for 127.0.0.1 at 2024-08-28 10:57:56 +0530
+Processing by TasksController#index as HTML
+  Parameters: {"project_id"=>"11"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:39:in `set_project'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 11]]
+  ↳ app/views/tasks/index.html.erb:13
+  Rendered tasks/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1833)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 6284)
+Completed 200 OK in 24ms (Views: 14.0ms | ActiveRecord: 0.7ms | Allocations: 8524)
+
+
+Started PATCH "/projects/11/tasks/24/update_status" for 127.0.0.1 at 2024-08-28 10:57:59 +0530
+Processing by TasksController#update_status as */*
+  Parameters: {"status"=>"backlog", "project_id"=>"11", "id"=>"24", "task"=>{"status"=>"backlog"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:39:in `set_project'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["project_id", 11], ["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:43:in `set_task'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:28:in `update_status'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:29:in `update_status'
+  [1m[36mTask Update (1.0ms)[0m  [1m[33mUPDATE "tasks" SET "status" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["status", "Backlog"], ["updated_at", "2024-08-28 05:27:59.059253"], ["id", 24]]
+  ↳ app/controllers/tasks_controller.rb:29:in `update_status'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:29:in `update_status'
+Completed 200 OK in 13ms (Views: 0.2ms | ActiveRecord: 1.5ms | Allocations: 5051)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2024-08-28 10:58:02 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /home/rails/tms_project/tms28aug/config/environment.rb:5)
+Started GET "/users/sign_out" for 127.0.0.1 at 2024-08-28 11:06:17 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
