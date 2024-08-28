@@ -14,6 +14,8 @@ gem 'bootstrap', '~>5.3'
 
 gem 'sassc-rails'
 
+gem 'rails-ujs'
+
 # gem 'bootstrap-sass'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]

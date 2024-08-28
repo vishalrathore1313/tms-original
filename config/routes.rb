@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
-  get 'home/index'
+  # get 'home/index'
 
 
   devise_for :users, controllers: {
     registrations: 'users/registrations'
   }
+
 
   devise_scope :user do
 
@@ -16,6 +17,8 @@ Rails.application.routes.draw do
   get 'otp_verification', to: 'users/registrations#otp_verification',as: :otp_verification
 
   post 'resend_otp', to: 'users/registrations#resend_otp',as: 'resend_otp'
+
+  get '/users/sign_out' => 'devise/sessions#destroy'
 
   end
 
