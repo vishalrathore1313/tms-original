@@ -24652,3 +24652,1325 @@ Processing by ProjectsController#show as HTML
 Completed 200 OK in 23ms (Views: 11.4ms | ActiveRecord: 0.7ms | Allocations: 5576)
 
 
+Started GET "/projects/11" for 127.0.0.1 at 2024-08-28 15:12:49 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 11], ["status", "Backlog"]]
+  ↳ app/views/projects/show.html.erb:52
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 11], ["status", "In_progress"]]
+  ↳ app/views/projects/show.html.erb:63
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 11], ["status", "Completed"]]
+  ↳ app/views/projects/show.html.erb:74
+  Rendered projects/show.html.erb within layouts/application (Duration: 7.1ms | Allocations: 2784)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 3227)
+Completed 200 OK in 15ms (Views: 8.3ms | ActiveRecord: 1.9ms | Allocations: 5905)
+
+
+Started GET "/projects" for 127.0.0.1 at 2024-08-28 15:14:43 +0530
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:65
+  Rendered projects/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1154)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 1593)
+Completed 200 OK in 9ms (Views: 5.3ms | ActiveRecord: 0.3ms | Allocations: 3156)
+
+
+Started GET "/projects/11" for 127.0.0.1 at 2024-08-28 15:14:52 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 11], ["status", "Backlog"]]
+  ↳ app/views/projects/show.html.erb:52
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 11], ["status", "In_progress"]]
+  ↳ app/views/projects/show.html.erb:63
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 11], ["status", "Completed"]]
+  ↳ app/views/projects/show.html.erb:74
+  Rendered projects/show.html.erb within layouts/application (Duration: 5.1ms | Allocations: 2751)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 3194)
+Completed 200 OK in 10ms (Views: 6.0ms | ActiveRecord: 0.3ms | Allocations: 5586)
+
+
+Started GET "/projects/11" for 127.0.0.1 at 2024-08-28 15:15:56 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 11], ["status", "Backlog"]]
+  ↳ app/views/projects/show.html.erb:52
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 11], ["status", "In_progress"]]
+  ↳ app/views/projects/show.html.erb:63
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 11], ["status", "Completed"]]
+  ↳ app/views/projects/show.html.erb:74
+  Rendered projects/show.html.erb within layouts/application (Duration: 7.8ms | Allocations: 2751)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 3194)
+Completed 200 OK in 20ms (Views: 9.2ms | ActiveRecord: 0.6ms | Allocations: 5552)
+
+
+Started GET "/projects/9" for 127.0.0.1 at 2024-08-28 15:15:59 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 9], ["status", "Backlog"]]
+  ↳ app/views/projects/show.html.erb:52
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 9], ["status", "In_progress"]]
+  ↳ app/views/projects/show.html.erb:63
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 9], ["status", "Completed"]]
+  ↳ app/views/projects/show.html.erb:74
+  Rendered projects/show.html.erb within layouts/application (Duration: 9.5ms | Allocations: 2778)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 3221)
+Completed 200 OK in 19ms (Views: 11.6ms | ActiveRecord: 0.6ms | Allocations: 5589)
+
+
+Started GET "/projects/11" for 127.0.0.1 at 2024-08-28 15:25:04 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 11], ["status", "Backlog"]]
+  ↳ app/views/projects/show.html.erb:52
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 11], ["status", "In_progress"]]
+  ↳ app/views/projects/show.html.erb:63
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 11], ["status", "Completed"]]
+  ↳ app/views/projects/show.html.erb:74
+  Rendered projects/show.html.erb within layouts/application (Duration: 15.0ms | Allocations: 7551)
+  Rendered layout layouts/application.html.erb (Duration: 17.3ms | Allocations: 9801)
+Completed 200 OK in 50ms (Views: 18.9ms | ActiveRecord: 4.3ms | Allocations: 27519)
+
+
+Started GET "/projects/11" for 127.0.0.1 at 2024-08-28 15:25:06 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 11], ["status", "Backlog"]]
+  ↳ app/views/projects/show.html.erb:52
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 11], ["status", "In_progress"]]
+  ↳ app/views/projects/show.html.erb:63
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 11], ["status", "Completed"]]
+  ↳ app/views/projects/show.html.erb:74
+  Rendered projects/show.html.erb within layouts/application (Duration: 13.1ms | Allocations: 2751)
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 3194)
+Completed 200 OK in 31ms (Views: 15.3ms | ActiveRecord: 0.8ms | Allocations: 5580)
+
+
+Started GET "/projects/11" for 127.0.0.1 at 2024-08-28 15:25:07 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 11], ["status", "Backlog"]]
+  ↳ app/views/projects/show.html.erb:52
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 11], ["status", "In_progress"]]
+  ↳ app/views/projects/show.html.erb:63
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 11], ["status", "Completed"]]
+  ↳ app/views/projects/show.html.erb:74
+  Rendered projects/show.html.erb within layouts/application (Duration: 6.9ms | Allocations: 2751)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 3194)
+Completed 200 OK in 20ms (Views: 9.3ms | ActiveRecord: 0.8ms | Allocations: 5564)
+
+
+Started GET "/projects/11" for 127.0.0.1 at 2024-08-28 15:25:07 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 11], ["status", "Backlog"]]
+  ↳ app/views/projects/show.html.erb:52
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 11], ["status", "In_progress"]]
+  ↳ app/views/projects/show.html.erb:63
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 11], ["status", "Completed"]]
+  ↳ app/views/projects/show.html.erb:74
+  Rendered projects/show.html.erb within layouts/application (Duration: 17.0ms | Allocations: 2751)
+  Rendered layout layouts/application.html.erb (Duration: 19.1ms | Allocations: 3194)
+Completed 200 OK in 35ms (Views: 21.0ms | ActiveRecord: 1.2ms | Allocations: 5574)
+
+
+Started GET "/projects/11" for 127.0.0.1 at 2024-08-28 15:25:20 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 11], ["status", "Backlog"]]
+  ↳ app/views/projects/show.html.erb:52
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 11], ["status", "In_progress"]]
+  ↳ app/views/projects/show.html.erb:63
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 11], ["status", "Completed"]]
+  ↳ app/views/projects/show.html.erb:74
+  Rendered projects/show.html.erb within layouts/application (Duration: 9.9ms | Allocations: 7547)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 9797)
+Completed 200 OK in 43ms (Views: 13.9ms | ActiveRecord: 3.1ms | Allocations: 28863)
+
+
+Started GET "/projects/11" for 127.0.0.1 at 2024-08-28 15:25:21 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 11], ["status", "Backlog"]]
+  ↳ app/views/projects/show.html.erb:52
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 11], ["status", "In_progress"]]
+  ↳ app/views/projects/show.html.erb:63
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 11], ["status", "Completed"]]
+  ↳ app/views/projects/show.html.erb:74
+  Rendered projects/show.html.erb within layouts/application (Duration: 18.0ms | Allocations: 2751)
+  Rendered layout layouts/application.html.erb (Duration: 19.8ms | Allocations: 3194)
+Completed 200 OK in 35ms (Views: 21.0ms | ActiveRecord: 1.4ms | Allocations: 5571)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2024-08-28 15:25:43 +0530
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 4ms (ActiveRecord: 0.1ms | Allocations: 2049)
+
+
+Started GET "/" for 127.0.0.1 at 2024-08-28 15:25:43 +0530
+Processing by ProjectsController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 318)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2024-08-28 15:25:43 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.1ms | Allocations: 597)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1986)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 2486)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.0ms | Allocations: 3872)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2024-08-28 15:25:46 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"abc@yopmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "abc@yopmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 276ms (ActiveRecord: 0.1ms | Allocations: 2755)
+
+
+Started GET "/" for 127.0.0.1 at 2024-08-28 15:25:46 +0530
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:65
+  Rendered projects/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1764)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 2203)
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 0.2ms | Allocations: 3834)
+
+
+Started GET "/projects/11" for 127.0.0.1 at 2024-08-28 15:25:49 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 11], ["status", "Backlog"]]
+  ↳ app/views/projects/show.html.erb:52
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 11], ["status", "In_progress"]]
+  ↳ app/views/projects/show.html.erb:63
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 11], ["status", "Completed"]]
+  ↳ app/views/projects/show.html.erb:74
+  Rendered projects/show.html.erb within layouts/application (Duration: 8.8ms | Allocations: 2751)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 3194)
+Completed 200 OK in 22ms (Views: 10.4ms | ActiveRecord: 0.7ms | Allocations: 5546)
+
+
+Started GET "/projects/11" for 127.0.0.1 at 2024-08-28 15:27:01 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 11], ["status", "Backlog"]]
+  ↳ app/views/projects/show.html.erb:52
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 11], ["status", "In_progress"]]
+  ↳ app/views/projects/show.html.erb:63
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 11], ["status", "Completed"]]
+  ↳ app/views/projects/show.html.erb:74
+  Rendered projects/show.html.erb within layouts/application (Duration: 10.1ms | Allocations: 7546)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 9796)
+Completed 200 OK in 42ms (Views: 13.9ms | ActiveRecord: 2.7ms | Allocations: 28801)
+
+
+Started GET "/projects/11" for 127.0.0.1 at 2024-08-28 15:27:02 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 11], ["status", "Backlog"]]
+  ↳ app/views/projects/show.html.erb:52
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 11], ["status", "In_progress"]]
+  ↳ app/views/projects/show.html.erb:63
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 11], ["status", "Completed"]]
+  ↳ app/views/projects/show.html.erb:74
+  Rendered projects/show.html.erb within layouts/application (Duration: 5.6ms | Allocations: 2751)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 3194)
+Completed 200 OK in 12ms (Views: 6.7ms | ActiveRecord: 0.4ms | Allocations: 5560)
+
+
+Started GET "/projects/11" for 127.0.0.1 at 2024-08-28 15:27:03 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 11], ["status", "Backlog"]]
+  ↳ app/views/projects/show.html.erb:52
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 11], ["status", "In_progress"]]
+  ↳ app/views/projects/show.html.erb:63
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 11], ["status", "Completed"]]
+  ↳ app/views/projects/show.html.erb:74
+  Rendered projects/show.html.erb within layouts/application (Duration: 7.1ms | Allocations: 2751)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 3194)
+Completed 200 OK in 13ms (Views: 8.1ms | ActiveRecord: 0.4ms | Allocations: 5550)
+
+
+Started GET "/projects/11" for 127.0.0.1 at 2024-08-28 15:27:27 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 11], ["status", "Backlog"]]
+  ↳ app/views/projects/show.html.erb:52
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 11], ["status", "In_progress"]]
+  ↳ app/views/projects/show.html.erb:63
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 11], ["status", "Completed"]]
+  ↳ app/views/projects/show.html.erb:74
+  Rendered projects/show.html.erb within layouts/application (Duration: 11.6ms | Allocations: 7549)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 9799)
+Completed 200 OK in 50ms (Views: 15.4ms | ActiveRecord: 2.9ms | Allocations: 28905)
+
+
+Started GET "/projects" for 127.0.0.1 at 2024-08-28 15:28:31 +0530
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:65
+  Rendered projects/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1761)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 2200)
+Completed 200 OK in 17ms (Views: 8.5ms | ActiveRecord: 0.4ms | Allocations: 3860)
+
+
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /home/rails/tms_project/tms28aug/config/environment.rb:5)
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /home/rails/tms_project/tms28aug/config/environment.rb:5)
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateActiveStorageTables (20240828100937)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "key" varchar NOT NULL, "filename" varchar NOT NULL, "content_type" varchar, "metadata" text, "service_name" varchar NOT NULL, "byte_size" bigint NOT NULL, "checksum" varchar, "created_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "record_type" varchar NOT NULL, "record_id" bigint NOT NULL, "blob_id" bigint NOT NULL, "created_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_attachments_uniqueness" ON "active_storage_attachments" ("record_type", "record_id", "name", "blob_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "active_storage_variant_records" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "blob_id" bigint NOT NULL, "variation_digest" varchar NOT NULL, CONSTRAINT "fk_rails_993965df05"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_variant_records_uniqueness" ON "active_storage_variant_records" ("blob_id", "variation_digest")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240828100937') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/projects/11" for 127.0.0.1 at 2024-08-28 15:50:59 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 11], ["status", "Backlog"]]
+  ↳ app/views/projects/show.html.erb:52
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 11], ["status", "In_progress"]]
+  ↳ app/views/projects/show.html.erb:63
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 11], ["status", "Completed"]]
+  ↳ app/views/projects/show.html.erb:74
+  Rendered projects/show.html.erb within layouts/application (Duration: 12.1ms | Allocations: 7767)
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 10017)
+Completed 200 OK in 157ms (Views: 15.9ms | ActiveRecord: 1.8ms | Allocations: 42326)
+
+
+Started GET "/projects" for 127.0.0.1 at 2024-08-28 15:54:30 +0530
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:73
+  Rendered projects/index.html.erb within layouts/application (Duration: 9.3ms | Allocations: 6872)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 6948)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 2.2ms | Allocations: 31122)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `file' for #<ActionView::Base:0x000000000642f8>
+Did you mean?  fail):
+    75: 
+    76:         <%= link_to project.id, project_path(project), class: 'text-dark' %>.
+    77:         <%= link_to project.title, project_path(project), class: 'text-dark' %>
+    78:         <%= link_to file.filename.to_s, rails_blob_path(file, disposition: "inline"), target: "_blank", class: "file-link" %>
+    79:       </li>
+    80:     <% end %>
+    81:   </ul>
+  
+app/views/projects/index.html.erb:78
+app/views/projects/index.html.erb:73
+Started GET "/projects" for 127.0.0.1 at 2024-08-28 15:54:33 +0530
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:73
+  Rendered projects/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 5766)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 5841)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.1ms | Allocations: 7398)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `file' for #<ActionView::Base:0x00000000064640>
+Did you mean?  fail):
+    75: 
+    76:         <%= link_to project.id, project_path(project), class: 'text-dark' %>.
+    77:         <%= link_to project.title, project_path(project), class: 'text-dark' %>
+    78:         <%= link_to file.filename.to_s, rails_blob_path(file, disposition: "inline"), target: "_blank", class: "file-link" %>
+    79:       </li>
+    80:     <% end %>
+    81:   </ul>
+  
+app/views/projects/index.html.erb:78
+app/views/projects/index.html.erb:73
+Started GET "/projects" for 127.0.0.1 at 2024-08-28 15:54:57 +0530
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:73
+  Rendered projects/index.html.erb within layouts/application (Duration: 10.2ms | Allocations: 5353)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 5429)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 2.2ms | Allocations: 29661)
+
+
+  
+ActionView::Template::Error (undefined method `filename' for #<Project id: 8, title: "Facebook", created_at: "2024-08-27 05:44:32.873702000 +0000", updated_at: "2024-08-27 05:44:32.873702000 +0000">
+Did you mean?  files):
+    75: 
+    76:         <%= link_to project.id, project_path(project), class: 'text-dark' %>.
+    77:         <%= link_to project.title, project_path(project), class: 'text-dark' %>
+    78:         <%= link_to project.filename.to_s, rails_blob_path(file, disposition: "inline"), target: "_blank", class: "file-link" %>
+    79:       </li>
+    80:     <% end %>
+    81:   </ul>
+  
+app/views/projects/index.html.erb:78
+app/views/projects/index.html.erb:73
+Started GET "/projects" for 127.0.0.1 at 2024-08-28 15:56:29 +0530
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:73
+  Rendered projects/index.html.erb within layouts/application (Duration: 8.4ms | Allocations: 6594)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 6670)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 2.4ms | Allocations: 30900)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `file' for #<ActionView::Base:0x000000000700d0>
+Did you mean?  fail):
+    75: 
+    76:         <%= link_to project.id, project_path(project), class: 'text-dark' %>.
+    77:         <%= link_to project.title, project_path(project), class: 'text-dark' %>
+    78:         <%= link_to project.files.to_s, rails_blob_path(file, disposition: "inline"), target: "_blank", class: "file-link" %>
+    79:       </li>
+    80:     <% end %>
+    81:   </ul>
+  
+app/views/projects/index.html.erb:78
+app/views/projects/index.html.erb:73
+Started GET "/projects" for 127.0.0.1 at 2024-08-28 16:00:47 +0530
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:73
+  Rendered projects/index.html.erb within layouts/application (Duration: 8.5ms | Allocations: 5285)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 5361)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 2.0ms | Allocations: 29593)
+
+
+  
+ActionView::Template::Error (undefined method `filename' for #<Project id: 8, title: "Facebook", created_at: "2024-08-27 05:44:32.873702000 +0000", updated_at: "2024-08-27 05:44:32.873702000 +0000">
+Did you mean?  files):
+    75: 
+    76:         <%= link_to project.id, project_path(project), class: 'text-dark' %>.
+    77:         <%= link_to project.title, project_path(project), class: 'text-dark' %>
+    78:         <%= link_to project.filename.to_s, rails_blob_path(file, disposition: "inline"), target: "_blank", class: "file-link" %>
+    79:       </li>
+    80:     <% end %>
+    81:   </ul>
+  
+app/views/projects/index.html.erb:78
+app/views/projects/index.html.erb:73
+Started GET "/projects" for 127.0.0.1 at 2024-08-28 16:01:01 +0530
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:73
+  Rendered projects/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 2091)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 4319)
+Completed 200 OK in 43ms (Views: 9.4ms | ActiveRecord: 2.1ms | Allocations: 28565)
+
+
+Started GET "/projects" for 127.0.0.1 at 2024-08-28 16:03:57 +0530
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:73
+  Rendered projects/index.html.erb within layouts/application (Duration: 16.3ms | Allocations: 8604)
+  Rendered layout layouts/application.html.erb (Duration: 18.9ms | Allocations: 10830)
+Completed 200 OK in 54ms (Views: 19.8ms | ActiveRecord: 2.4ms | Allocations: 34924)
+
+
+Started POST "/projects" for 127.0.0.1 at 2024-08-28 16:06:46 +0530
+Processing by ProjectsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "project"=>{"title"=>"Thread", "files"=>["", #<ActionDispatch::Http::UploadedFile:0x00007fd355fcfa50 @tempfile=#<Tempfile:/tmp/RackMultipart20240828-14843-cyxy2l.xlsx>, @content_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", @original_filename="BASIC TRAINING SYLLABUS OF SHRIFFLE TECHNOLOGY(1).xlsx", @headers="Content-Disposition: form-data; name=\"project[files][]\"; filename=\"BASIC TRAINING SYLLABUS OF SHRIFFLE TECHNOLOGY(1).xlsx\"\r\nContent-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet\r\n">]}, "commit"=>"Create New Project"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/projects_controller.rb:21:in `create'
+  [1m[36mProject Create (1.0ms)[0m  [1m[32mINSERT INTO "projects" ("title", "created_at", "updated_at") VALUES (?, ?, ?) RETURNING "id"[0m  [["title", "Thread"], ["created_at", "2024-08-28 10:36:47.104857"], ["updated_at", "2024-08-28 10:36:47.104857"]]
+  ↳ app/controllers/projects_controller.rb:21:in `create'
+  [1m[36mActiveStorage::Blob Create (0.2ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["key", "fq6fgcxa2qbrzwl21gaft77en3yi"], ["filename", "BASIC TRAINING SYLLABUS OF SHRIFFLE TECHNOLOGY(1).xlsx"], ["content_type", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"], ["metadata", "{\"identified\":true}"], ["service_name", "local"], ["byte_size", 11724], ["checksum", "elLr+URgm4df1rqXGFzjIw=="], ["created_at", "2024-08-28 10:36:47.108749"]]
+  ↳ app/controllers/projects_controller.rb:21:in `create'
+  [1m[36mActiveStorage::Attachment Create (0.1ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "files"], ["record_type", "Project"], ["record_id", 12], ["blob_id", 1], ["created_at", "2024-08-28 10:36:47.111042"]]
+  ↳ app/controllers/projects_controller.rb:21:in `create'
+  [1m[36mProject Update (0.2ms)[0m  [1m[33mUPDATE "projects" SET "updated_at" = ? WHERE "projects"."id" = ?[0m  [["updated_at", "2024-08-28 10:36:47.112755"], ["id", 12]]
+  ↳ app/controllers/projects_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/projects_controller.rb:21:in `create'
+[36m  Disk Storage (0.5ms) [0m[32mUploaded file to key: fq6fgcxa2qbrzwl21gaft77en3yi (checksum: elLr+URgm4df1rqXGFzjIw==)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/projects_controller.rb:21:in `create'
+  [1m[36mActiveStorage::Blob Update (1.7ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 1]]
+  ↳ app/controllers/projects_controller.rb:21:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = ?[0m  [["blob_id", 1]]
+  ↳ app/controllers/projects_controller.rb:21:in `create'
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ?[0m  [["id", 12]]
+  ↳ app/controllers/projects_controller.rb:21:in `create'
+  [1m[36mProject Update (0.3ms)[0m  [1m[33mUPDATE "projects" SET "updated_at" = ? WHERE "projects"."id" = ?[0m  [["updated_at", "2024-08-28 10:36:47.147748"], ["id", 12]]
+  ↳ app/controllers/projects_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/projects_controller.rb:21:in `create'
+Redirected to http://localhost:3000/projects/12
+Completed 302 Found in 198ms (ActiveRecord: 7.9ms | Allocations: 189239)
+
+
+Started GET "/projects/12" for 127.0.0.1 at 2024-08-28 16:06:47 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 12], ["status", "Backlog"]]
+  ↳ app/views/projects/show.html.erb:52
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 12], ["status", "In_progress"]]
+  ↳ app/views/projects/show.html.erb:63
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 12], ["status", "Completed"]]
+  ↳ app/views/projects/show.html.erb:74
+  Rendered projects/show.html.erb within layouts/application (Duration: 9.7ms | Allocations: 7970)
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | Allocations: 10220)
+Completed 200 OK in 24ms (Views: 12.8ms | ActiveRecord: 0.8ms | Allocations: 17346)
+
+
+Started POST "/projects/12/tasks" for 127.0.0.1 at 2024-08-28 16:06:55 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "task"=>{"title"=>"aaa", "description"=>"aaa", "status"=>"backlog"}, "commit"=>"Add Task", "project_id"=>"12"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:39:in `set_project'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:11:in `create'
+  [1m[36mTask Create (1.2ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "description", "status", "project_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "aaa"], ["description", "aaa"], ["status", "Backlog"], ["project_id", 12], ["created_at", "2024-08-28 10:36:55.906137"], ["updated_at", "2024-08-28 10:36:55.906137"]]
+  ↳ app/controllers/tasks_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:11:in `create'
+Redirected to http://localhost:3000/projects/12
+Completed 302 Found in 10ms (ActiveRecord: 1.5ms | Allocations: 4288)
+
+
+Started GET "/projects/12" for 127.0.0.1 at 2024-08-28 16:06:55 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 12], ["status", "Backlog"]]
+  ↳ app/views/projects/show.html.erb:52
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 12], ["status", "In_progress"]]
+  ↳ app/views/projects/show.html.erb:63
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 12], ["status", "Completed"]]
+  ↳ app/views/projects/show.html.erb:74
+  Rendered projects/show.html.erb within layouts/application (Duration: 5.5ms | Allocations: 2791)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 3234)
+Completed 200 OK in 10ms (Views: 6.5ms | ActiveRecord: 0.3ms | Allocations: 5299)
+
+
+Started GET "/projects" for 127.0.0.1 at 2024-08-28 16:06:59 +0530
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:73
+  Rendered projects/index.html.erb within layouts/application (Duration: 8.8ms | Allocations: 2672)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 3111)
+Completed 200 OK in 19ms (Views: 11.2ms | ActiveRecord: 0.3ms | Allocations: 4749)
+
+
+Started GET "/projects/12" for 127.0.0.1 at 2024-08-28 16:09:08 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 12], ["status", "Backlog"]]
+  ↳ app/views/projects/show.html.erb:52
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 12], ["status", "In_progress"]]
+  ↳ app/views/projects/show.html.erb:63
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 12], ["status", "Completed"]]
+  ↳ app/views/projects/show.html.erb:74
+  Rendered projects/show.html.erb within layouts/application (Duration: 7.9ms | Allocations: 2771)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 3214)
+Completed 200 OK in 15ms (Views: 9.4ms | ActiveRecord: 0.6ms | Allocations: 5285)
+
+
+Started PATCH "/projects/12/tasks/26/update_status" for 127.0.0.1 at 2024-08-28 16:09:10 +0530
+Processing by TasksController#update_status as */*
+  Parameters: {"status"=>"in_progress", "project_id"=>"12", "id"=>"26", "task"=>{"status"=>"in_progress"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:39:in `set_project'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["project_id", 12], ["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:43:in `set_task'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:28:in `update_status'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:29:in `update_status'
+  [1m[36mTask Update (1.3ms)[0m  [1m[33mUPDATE "tasks" SET "status" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["status", "In_progress"], ["updated_at", "2024-08-28 10:39:10.461846"], ["id", 26]]
+  ↳ app/controllers/tasks_controller.rb:29:in `update_status'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:29:in `update_status'
+Completed 200 OK in 15ms (Views: 0.3ms | ActiveRecord: 2.2ms | Allocations: 5775)
+
+
+Started GET "/projects/12/tasks" for 127.0.0.1 at 2024-08-28 16:09:12 +0530
+Processing by TasksController#index as HTML
+  Parameters: {"project_id"=>"12"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:39:in `set_project'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 12]]
+  ↳ app/views/tasks/index.html.erb:13
+  Rendered tasks/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1804)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 2259)
+Completed 200 OK in 13ms (Views: 5.9ms | ActiveRecord: 0.4ms | Allocations: 4481)
+
+
+Started POST "/projects" for 127.0.0.1 at 2024-08-28 16:09:58 +0530
+Processing by ProjectsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "project"=>{"title"=>"aaa", "files"=>["", #<ActionDispatch::Http::UploadedFile:0x00007fd34c5404d0 @tempfile=#<Tempfile:/tmp/RackMultipart20240828-14843-wwh7af.jpg>, @content_type="image/jpeg", @original_filename="grp.jpg", @headers="Content-Disposition: form-data; name=\"project[files][]\"; filename=\"grp.jpg\"\r\nContent-Type: image/jpeg\r\n">]}, "commit"=>"Create New Project"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/projects_controller.rb:21:in `create'
+  [1m[36mProject Create (2.0ms)[0m  [1m[32mINSERT INTO "projects" ("title", "created_at", "updated_at") VALUES (?, ?, ?) RETURNING "id"[0m  [["title", "aaa"], ["created_at", "2024-08-28 10:39:58.834738"], ["updated_at", "2024-08-28 10:39:58.834738"]]
+  ↳ app/controllers/projects_controller.rb:21:in `create'
+  [1m[36mActiveStorage::Blob Create (1.1ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["key", "7paqr7f2n8sq01h14rsuqn00blr7"], ["filename", "grp.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["service_name", "local"], ["byte_size", 5852253], ["checksum", "M4TEkOD/JRfu/ySh706POA=="], ["created_at", "2024-08-28 10:39:58.839617"]]
+  ↳ app/controllers/projects_controller.rb:21:in `create'
+  [1m[36mActiveStorage::Attachment Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "files"], ["record_type", "Project"], ["record_id", 13], ["blob_id", 2], ["created_at", "2024-08-28 10:39:58.842844"]]
+  ↳ app/controllers/projects_controller.rb:21:in `create'
+  [1m[36mProject Update (0.1ms)[0m  [1m[33mUPDATE "projects" SET "updated_at" = ? WHERE "projects"."id" = ?[0m  [["updated_at", "2024-08-28 10:39:58.845140"], ["id", 13]]
+  ↳ app/controllers/projects_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/projects_controller.rb:21:in `create'
+[36m  Disk Storage (27.8ms) [0m[32mUploaded file to key: 7paqr7f2n8sq01h14rsuqn00blr7 (checksum: M4TEkOD/JRfu/ySh706POA==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 06a22ad5-f70d-406f-95fe-9ada9f08f773) to Async(default) with arguments: #<GlobalID:0x00007fd34430e688 @uri=#<URI::GID gid://tms22aug/ActiveStorage::Blob/2>>
+[ActiveJob] ↳ app/controllers/projects_controller.rb:21:in `create'
+Redirected to http://localhost:3000/projects/13
+Completed 302 Found in 121ms (ActiveRecord: 5.0ms | Allocations: 25554)
+
+
+[ActiveJob] [ActiveStorage::AnalyzeJob] [06a22ad5-f70d-406f-95fe-9ada9f08f773]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [06a22ad5-f70d-406f-95fe-9ada9f08f773] Performing ActiveStorage::AnalyzeJob (Job ID: 06a22ad5-f70d-406f-95fe-9ada9f08f773) from Async(default) enqueued at 2024-08-28T10:39:58.912461609Z with arguments: #<GlobalID:0x00007fd34432b7d8 @uri=#<URI::GID gid://tms22aug/ActiveStorage::Blob/2>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [06a22ad5-f70d-406f-95fe-9ada9f08f773] Skipping image analysis because the ruby-vips gem isn't installed
+Started GET "/projects/13" for 127.0.0.1 at 2024-08-28 16:09:58 +0530
+[ActiveJob] [ActiveStorage::AnalyzeJob] [06a22ad5-f70d-406f-95fe-9ada9f08f773]   [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [06a22ad5-f70d-406f-95fe-9ada9f08f773]   [1m[36mActiveStorage::Blob Update (1.9ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 2]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [06a22ad5-f70d-406f-95fe-9ada9f08f773]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = ?[0m  [["blob_id", 2]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [06a22ad5-f70d-406f-95fe-9ada9f08f773]   [1m[36mProject Load (0.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ?[0m  [["id", 13]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [06a22ad5-f70d-406f-95fe-9ada9f08f773]   [1m[36mProject Update (0.1ms)[0m  [1m[33mUPDATE "projects" SET "updated_at" = ? WHERE "projects"."id" = ?[0m  [["updated_at", "2024-08-28 10:39:58.941976"], ["id", 13]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [06a22ad5-f70d-406f-95fe-9ada9f08f773]   [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [06a22ad5-f70d-406f-95fe-9ada9f08f773] Performed ActiveStorage::AnalyzeJob (Job ID: 06a22ad5-f70d-406f-95fe-9ada9f08f773) from Async(default) in 25.01ms
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 13], ["status", "Backlog"]]
+  ↳ app/views/projects/show.html.erb:52
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 13], ["status", "In_progress"]]
+  ↳ app/views/projects/show.html.erb:63
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 13], ["status", "Completed"]]
+  ↳ app/views/projects/show.html.erb:74
+  Rendered projects/show.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2736)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3179)
+Completed 200 OK in 10ms (Views: 6.0ms | ActiveRecord: 0.3ms | Allocations: 5251)
+
+
+Started POST "/projects/13/tasks" for 127.0.0.1 at 2024-08-28 16:10:03 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "task"=>{"title"=>"aa", "description"=>"aa", "status"=>"backlog"}, "commit"=>"Add Task", "project_id"=>"13"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:39:in `set_project'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:11:in `create'
+  [1m[36mTask Create (2.4ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "description", "status", "project_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "aa"], ["description", "aa"], ["status", "Backlog"], ["project_id", 13], ["created_at", "2024-08-28 10:40:03.620224"], ["updated_at", "2024-08-28 10:40:03.620224"]]
+  ↳ app/controllers/tasks_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:11:in `create'
+Redirected to http://localhost:3000/projects/13
+Completed 302 Found in 13ms (ActiveRecord: 2.7ms | Allocations: 4053)
+
+
+Started GET "/projects/13" for 127.0.0.1 at 2024-08-28 16:10:03 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 13], ["status", "Backlog"]]
+  ↳ app/views/projects/show.html.erb:52
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 13], ["status", "In_progress"]]
+  ↳ app/views/projects/show.html.erb:63
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 13], ["status", "Completed"]]
+  ↳ app/views/projects/show.html.erb:74
+  Rendered projects/show.html.erb within layouts/application (Duration: 5.0ms | Allocations: 2771)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 3214)
+Completed 200 OK in 13ms (Views: 6.5ms | ActiveRecord: 0.4ms | Allocations: 5285)
+
+
+Started POST "/projects" for 127.0.0.1 at 2024-08-28 16:10:55 +0530
+Processing by ProjectsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "project"=>{"title"=>"aaa", "files"=>["", #<ActionDispatch::Http::UploadedFile:0x00007fd34c0dbb10 @tempfile=#<Tempfile:/tmp/RackMultipart20240828-14843-ltavkv.jpg>, @content_type="image/jpeg", @original_filename="grp.jpg", @headers="Content-Disposition: form-data; name=\"project[files][]\"; filename=\"grp.jpg\"\r\nContent-Type: image/jpeg\r\n">]}, "commit"=>"Create New Project"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/projects_controller.rb:21:in `create'
+  [1m[36mProject Create (0.9ms)[0m  [1m[32mINSERT INTO "projects" ("title", "created_at", "updated_at") VALUES (?, ?, ?) RETURNING "id"[0m  [["title", "aaa"], ["created_at", "2024-08-28 10:40:55.560230"], ["updated_at", "2024-08-28 10:40:55.560230"]]
+  ↳ app/controllers/projects_controller.rb:21:in `create'
+  [1m[36mActiveStorage::Blob Create (0.2ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["key", "zibwa4azetfk1zr44okmg1winm3u"], ["filename", "grp.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["service_name", "local"], ["byte_size", 5852253], ["checksum", "M4TEkOD/JRfu/ySh706POA=="], ["created_at", "2024-08-28 10:40:55.563050"]]
+  ↳ app/controllers/projects_controller.rb:21:in `create'
+  [1m[36mActiveStorage::Attachment Create (0.2ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "files"], ["record_type", "Project"], ["record_id", 14], ["blob_id", 3], ["created_at", "2024-08-28 10:40:55.565453"]]
+  ↳ app/controllers/projects_controller.rb:21:in `create'
+  [1m[36mProject Update (0.2ms)[0m  [1m[33mUPDATE "projects" SET "updated_at" = ? WHERE "projects"."id" = ?[0m  [["updated_at", "2024-08-28 10:40:55.567599"], ["id", 14]]
+  ↳ app/controllers/projects_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/projects_controller.rb:21:in `create'
+[36m  Disk Storage (18.7ms) [0m[32mUploaded file to key: zibwa4azetfk1zr44okmg1winm3u (checksum: M4TEkOD/JRfu/ySh706POA==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 7d832a58-e452-4683-8825-811f5d6ed44a) to Async(default) with arguments: #<GlobalID:0x00007fd358174b60 @uri=#<URI::GID gid://tms22aug/ActiveStorage::Blob/3>>
+[ActiveJob] ↳ app/controllers/projects_controller.rb:21:in `create'
+Redirected to http://localhost:3000/projects/14
+Completed 302 Found in 50ms (ActiveRecord: 1.7ms | Allocations: 8592)
+
+
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7d832a58-e452-4683-8825-811f5d6ed44a]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7d832a58-e452-4683-8825-811f5d6ed44a] Performing ActiveStorage::AnalyzeJob (Job ID: 7d832a58-e452-4683-8825-811f5d6ed44a) from Async(default) enqueued at 2024-08-28T10:40:55.590126263Z with arguments: #<GlobalID:0x00007fd3549ad1c8 @uri=#<URI::GID gid://tms22aug/ActiveStorage::Blob/3>>
+Started GET "/projects/14" for 127.0.0.1 at 2024-08-28 16:10:55 +0530
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7d832a58-e452-4683-8825-811f5d6ed44a] Skipping image analysis because the ruby-vips gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7d832a58-e452-4683-8825-811f5d6ed44a]   [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7d832a58-e452-4683-8825-811f5d6ed44a]   [1m[36mActiveStorage::Blob Update (1.4ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 3]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7d832a58-e452-4683-8825-811f5d6ed44a]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = ?[0m  [["blob_id", 3]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7d832a58-e452-4683-8825-811f5d6ed44a]   [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ?[0m  [["id", 14]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7d832a58-e452-4683-8825-811f5d6ed44a]   [1m[36mProject Update (0.1ms)[0m  [1m[33mUPDATE "projects" SET "updated_at" = ? WHERE "projects"."id" = ?[0m  [["updated_at", "2024-08-28 10:40:55.625232"], ["id", 14]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7d832a58-e452-4683-8825-811f5d6ed44a]   [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+Processing by ProjectsController#show as HTML
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7d832a58-e452-4683-8825-811f5d6ed44a] Performed ActiveStorage::AnalyzeJob (Job ID: 7d832a58-e452-4683-8825-811f5d6ed44a) from Async(default) in 32.99ms
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 14], ["status", "Backlog"]]
+  ↳ app/views/projects/show.html.erb:52
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 14], ["status", "In_progress"]]
+  ↳ app/views/projects/show.html.erb:63
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 14], ["status", "Completed"]]
+  ↳ app/views/projects/show.html.erb:74
+  Rendered projects/show.html.erb within layouts/application (Duration: 4.9ms | Allocations: 2734)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 3177)
+Completed 200 OK in 12ms (Views: 5.6ms | ActiveRecord: 0.6ms | Allocations: 5249)
+
+
+Started GET "/projects" for 127.0.0.1 at 2024-08-28 16:11:08 +0530
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:73
+  Rendered projects/index.html.erb within layouts/application (Duration: 6.9ms | Allocations: 2094)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 2533)
+Completed 200 OK in 15ms (Views: 9.2ms | ActiveRecord: 0.3ms | Allocations: 4106)
+
+
+Started GET "/projects" for 127.0.0.1 at 2024-08-28 16:12:10 +0530
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:73
+  Rendered projects/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 2094)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 2533)
+Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 0.1ms | Allocations: 4102)
+
+
+Started GET "/projects" for 127.0.0.1 at 2024-08-28 16:12:11 +0530
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:73
+  Rendered projects/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 2094)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 2533)
+Completed 200 OK in 12ms (Views: 6.9ms | ActiveRecord: 0.3ms | Allocations: 4106)
+
+
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /home/rails/tms_project/tms28aug/config/environment.rb:5)
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 14], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 14], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 8], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 8], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 8], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 8], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 14], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 14], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 14], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 14], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 14], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+Started GET "/projects" for 127.0.0.1 at 2024-08-28 16:39:29 +0530
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:73
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 8], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:79
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:79
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:79
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 12], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:79
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 12], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:81
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:83
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 13], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:79
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 13], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:81
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:83
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 14], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:79
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 14], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:81
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:83
+  Rendered projects/index.html.erb within layouts/application (Duration: 49.8ms | Allocations: 26245)
+  Rendered layout layouts/application.html.erb (Duration: 53.3ms | Allocations: 28495)
+Completed 200 OK in 84ms (Views: 54.0ms | ActiveRecord: 2.9ms | Allocations: 51825)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MSwicHVyIjoiYmxvYl9pZCJ9fQ==--571b492921df2f58c948d88ec44cd6f91a2abd0c/BASIC%20TRAINING%20SYLLABUS%20OF%20SHRIFFLE%20TECHNOLOGY(1).xlsx?disposition=inline" for 127.0.0.1 at 2024-08-28 16:39:33 +0530
+Processing by ActiveStorage::Blobs::RedirectController#show as */*
+  Parameters: {"disposition"=>"inline", "signed_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6MSwicHVyIjoiYmxvYl9pZCJ9fQ==--571b492921df2f58c948d88ec44cd6f91a2abd0c", "filename"=>"BASIC TRAINING SYLLABUS OF SHRIFFLE TECHNOLOGY(1)"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[36m  Disk Storage (0.6ms) [0m[34mGenerated URL for file at key: fq6fgcxa2qbrzwl21gaft77en3yi (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJmcTZmZ2N4YTJxYnJ6d2wyMWdhZnQ3N2VuM3lpIiwiZGlzcG9zaXRpb24iOiJhdHRhY2htZW50OyBmaWxlbmFtZT1cIkJBU0lDIFRSQUlOSU5HIFNZTExBQlVTIE9GIFNIUklGRkxFIFRFQ0hOT0xPR1klMjgxJTI5Lnhsc3hcIjsgZmlsZW5hbWUqPVVURi04JydCQVNJQyUyMFRSQUlOSU5HJTIwU1lMTEFCVVMlMjBPRiUyMFNIUklGRkxFJTIwVEVDSE5PTE9HWSUyODElMjkueGxzeCIsImNvbnRlbnRfdHlwZSI6ImFwcGxpY2F0aW9uL3ZuZC5vcGVueG1sZm9ybWF0cy1vZmZpY2Vkb2N1bWVudC5zcHJlYWRzaGVldG1sLnNoZWV0Iiwic2VydmljZV9uYW1lIjoibG9jYWwifSwiZXhwIjoiMjAyNC0wOC0yOFQxMToxNDozMy42OTVaIiwicHVyIjoiYmxvYl9rZXkifX0=--c1f4f01442c49b199ba8b76821ffa77240ec5262/BASIC%20TRAINING%20SYLLABUS%20OF%20SHRIFFLE%20TECHNOLOGY(1).xlsx)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJmcTZmZ2N4YTJxYnJ6d2wyMWdhZnQ3N2VuM3lpIiwiZGlzcG9zaXRpb24iOiJhdHRhY2htZW50OyBmaWxlbmFtZT1cIkJBU0lDIFRSQUlOSU5HIFNZTExBQlVTIE9GIFNIUklGRkxFIFRFQ0hOT0xPR1klMjgxJTI5Lnhsc3hcIjsgZmlsZW5hbWUqPVVURi04JydCQVNJQyUyMFRSQUlOSU5HJTIwU1lMTEFCVVMlMjBPRiUyMFNIUklGRkxFJTIwVEVDSE5PTE9HWSUyODElMjkueGxzeCIsImNvbnRlbnRfdHlwZSI6ImFwcGxpY2F0aW9uL3ZuZC5vcGVueG1sZm9ybWF0cy1vZmZpY2Vkb2N1bWVudC5zcHJlYWRzaGVldG1sLnNoZWV0Iiwic2VydmljZV9uYW1lIjoibG9jYWwifSwiZXhwIjoiMjAyNC0wOC0yOFQxMToxNDozMy42OTVaIiwicHVyIjoiYmxvYl9rZXkifX0=--c1f4f01442c49b199ba8b76821ffa77240ec5262/BASIC%20TRAINING%20SYLLABUS%20OF%20SHRIFFLE%20TECHNOLOGY(1).xlsx
+Completed 302 Found in 6ms (ActiveRecord: 0.1ms | Allocations: 2895)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJmcTZmZ2N4YTJxYnJ6d2wyMWdhZnQ3N2VuM3lpIiwiZGlzcG9zaXRpb24iOiJhdHRhY2htZW50OyBmaWxlbmFtZT1cIkJBU0lDIFRSQUlOSU5HIFNZTExBQlVTIE9GIFNIUklGRkxFIFRFQ0hOT0xPR1klMjgxJTI5Lnhsc3hcIjsgZmlsZW5hbWUqPVVURi04JydCQVNJQyUyMFRSQUlOSU5HJTIwU1lMTEFCVVMlMjBPRiUyMFNIUklGRkxFJTIwVEVDSE5PTE9HWSUyODElMjkueGxzeCIsImNvbnRlbnRfdHlwZSI6ImFwcGxpY2F0aW9uL3ZuZC5vcGVueG1sZm9ybWF0cy1vZmZpY2Vkb2N1bWVudC5zcHJlYWRzaGVldG1sLnNoZWV0Iiwic2VydmljZV9uYW1lIjoibG9jYWwifSwiZXhwIjoiMjAyNC0wOC0yOFQxMToxNDozMy42OTVaIiwicHVyIjoiYmxvYl9rZXkifX0=--c1f4f01442c49b199ba8b76821ffa77240ec5262/BASIC%20TRAINING%20SYLLABUS%20OF%20SHRIFFLE%20TECHNOLOGY(1).xlsx" for 127.0.0.1 at 2024-08-28 16:39:33 +0530
+Processing by ActiveStorage::DiskController#show as */*
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"BASIC TRAINING SYLLABUS OF SHRIFFLE TECHNOLOGY(1)"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 247)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MiwicHVyIjoiYmxvYl9pZCJ9fQ==--d08cfef0c1fd8122545854a4889fcfe48fcd9832/grp.jpg?disposition=inline" for 127.0.0.1 at 2024-08-28 16:43:35 +0530
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"disposition"=>"inline", "signed_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6MiwicHVyIjoiYmxvYl9pZCJ9fQ==--d08cfef0c1fd8122545854a4889fcfe48fcd9832", "filename"=>"grp"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: 7paqr7f2n8sq01h14rsuqn00blr7 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiI3cGFxcjdmMm44c3EwMWgxNHJzdXFuMDBibHI3IiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiZ3JwLmpwZ1wiOyBmaWxlbmFtZSo9VVRGLTgnJ2dycC5qcGciLCJjb250ZW50X3R5cGUiOiJpbWFnZS9qcGVnIiwic2VydmljZV9uYW1lIjoibG9jYWwifSwiZXhwIjoiMjAyNC0wOC0yOFQxMToxODozNS43MzNaIiwicHVyIjoiYmxvYl9rZXkifX0=--a5194e66fb5bd1b422bb6fd5ca3529f682862359/grp.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiI3cGFxcjdmMm44c3EwMWgxNHJzdXFuMDBibHI3IiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiZ3JwLmpwZ1wiOyBmaWxlbmFtZSo9VVRGLTgnJ2dycC5qcGciLCJjb250ZW50X3R5cGUiOiJpbWFnZS9qcGVnIiwic2VydmljZV9uYW1lIjoibG9jYWwifSwiZXhwIjoiMjAyNC0wOC0yOFQxMToxODozNS43MzNaIiwicHVyIjoiYmxvYl9rZXkifX0=--a5194e66fb5bd1b422bb6fd5ca3529f682862359/grp.jpg
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms | Allocations: 1260)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiI3cGFxcjdmMm44c3EwMWgxNHJzdXFuMDBibHI3IiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiZ3JwLmpwZ1wiOyBmaWxlbmFtZSo9VVRGLTgnJ2dycC5qcGciLCJjb250ZW50X3R5cGUiOiJpbWFnZS9qcGVnIiwic2VydmljZV9uYW1lIjoibG9jYWwifSwiZXhwIjoiMjAyNC0wOC0yOFQxMToxODozNS43MzNaIiwicHVyIjoiYmxvYl9rZXkifX0=--a5194e66fb5bd1b422bb6fd5ca3529f682862359/grp.jpg" for 127.0.0.1 at 2024-08-28 16:43:35 +0530
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"grp"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+Started GET "/projects" for 127.0.0.1 at 2024-08-28 16:51:06 +0530
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:73
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 8], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:79
+  [1m[36mActiveStorage::Attachment Exists? (34.8ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:79
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:79
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 12], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:79
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 12], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:81
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:83
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 13], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:79
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 13], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:81
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:83
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 14], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:79
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 14], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:81
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:83
+  Rendered projects/index.html.erb within layouts/application (Duration: 108.0ms | Allocations: 26422)
+  Rendered layout layouts/application.html.erb (Duration: 110.4ms | Allocations: 28674)
+Completed 200 OK in 207ms (Views: 75.2ms | ActiveRecord: 40.5ms | Allocations: 51861)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MywicHVyIjoiYmxvYl9pZCJ9fQ==--eff90c0eccb7230f1806788701bbcfc05b4af5b2/grp.jpg?disposition=inline" for 127.0.0.1 at 2024-08-28 16:51:12 +0530
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"disposition"=>"inline", "signed_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6MywicHVyIjoiYmxvYl9pZCJ9fQ==--eff90c0eccb7230f1806788701bbcfc05b4af5b2", "filename"=>"grp"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[36m  Disk Storage (0.5ms) [0m[34mGenerated URL for file at key: zibwa4azetfk1zr44okmg1winm3u (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJ6aWJ3YTRhemV0ZmsxenI0NG9rbWcxd2lubTN1IiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiZ3JwLmpwZ1wiOyBmaWxlbmFtZSo9VVRGLTgnJ2dycC5qcGciLCJjb250ZW50X3R5cGUiOiJpbWFnZS9qcGVnIiwic2VydmljZV9uYW1lIjoibG9jYWwifSwiZXhwIjoiMjAyNC0wOC0yOFQxMToyNjoxMi44MThaIiwicHVyIjoiYmxvYl9rZXkifX0=--2a0f79d0ac4ee5f9d6879afa16e4913f0e953c38/grp.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJ6aWJ3YTRhemV0ZmsxenI0NG9rbWcxd2lubTN1IiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiZ3JwLmpwZ1wiOyBmaWxlbmFtZSo9VVRGLTgnJ2dycC5qcGciLCJjb250ZW50X3R5cGUiOiJpbWFnZS9qcGVnIiwic2VydmljZV9uYW1lIjoibG9jYWwifSwiZXhwIjoiMjAyNC0wOC0yOFQxMToyNjoxMi44MThaIiwicHVyIjoiYmxvYl9rZXkifX0=--2a0f79d0ac4ee5f9d6879afa16e4913f0e953c38/grp.jpg
+Completed 302 Found in 5ms (ActiveRecord: 0.1ms | Allocations: 2047)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJ6aWJ3YTRhemV0ZmsxenI0NG9rbWcxd2lubTN1IiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiZ3JwLmpwZ1wiOyBmaWxlbmFtZSo9VVRGLTgnJ2dycC5qcGciLCJjb250ZW50X3R5cGUiOiJpbWFnZS9qcGVnIiwic2VydmljZV9uYW1lIjoibG9jYWwifSwiZXhwIjoiMjAyNC0wOC0yOFQxMToyNjoxMi44MThaIiwicHVyIjoiYmxvYl9rZXkifX0=--2a0f79d0ac4ee5f9d6879afa16e4913f0e953c38/grp.jpg" for 127.0.0.1 at 2024-08-28 16:51:12 +0530
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"grp"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 234)
+
+
+Started GET "/projects" for 127.0.0.1 at 2024-08-28 16:52:32 +0530
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:73
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 8], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:79
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:79
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:79
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 12], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:79
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 12], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:81
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:83
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 13], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:79
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 13], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:81
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:83
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 14], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:79
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 14], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:81
+  [1m[36mActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:83
+  Rendered projects/index.html.erb within layouts/application (Duration: 36.8ms | Allocations: 27257)
+  Rendered layout layouts/application.html.erb (Duration: 39.0ms | Allocations: 29505)
+Completed 200 OK in 75ms (Views: 39.4ms | ActiveRecord: 3.9ms | Allocations: 53661)
+
+
+Started GET "/projects" for 127.0.0.1 at 2024-08-28 16:53:12 +0530
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:73
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 8], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:79
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:79
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:79
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 12], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:79
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 12], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:81
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:83
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 13], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:79
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 13], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:81
+  [1m[36mActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:83
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 14], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:79
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 14], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:81
+  [1m[36mActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:83
+  Rendered projects/index.html.erb within layouts/application (Duration: 36.4ms | Allocations: 27256)
+  Rendered layout layouts/application.html.erb (Duration: 38.9ms | Allocations: 29505)
+Completed 200 OK in 73ms (Views: 39.4ms | ActiveRecord: 3.8ms | Allocations: 53635)
+
+
+Started GET "/projects" for 127.0.0.1 at 2024-08-28 16:54:23 +0530
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:73
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 8], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:79
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:79
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:79
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 12], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:79
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 12], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:81
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:83
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 13], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:79
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 13], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:81
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:83
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 14], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:79
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 14], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:81
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:83
+  Rendered projects/index.html.erb within layouts/application (Duration: 37.1ms | Allocations: 27262)
+  Rendered layout layouts/application.html.erb (Duration: 40.5ms | Allocations: 29512)
+Completed 200 OK in 116ms (Views: 40.0ms | ActiveRecord: 5.7ms | Allocations: 53724)
+
+
+Started GET "/projects" for 127.0.0.1 at 2024-08-28 16:54:44 +0530
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:73
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 8], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:79
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:79
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:79
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 12], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:79
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 12], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:81
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:83
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 13], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:79
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 13], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:81
+  [1m[36mActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:83
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 14], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:79
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 14], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:81
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:83
+  Rendered projects/index.html.erb within layouts/application (Duration: 36.9ms | Allocations: 27291)
+  Rendered layout layouts/application.html.erb (Duration: 39.4ms | Allocations: 29539)
+Completed 200 OK in 72ms (Views: 39.5ms | ActiveRecord: 3.6ms | Allocations: 53671)
+
+
+Started GET "/projects/14" for 127.0.0.1 at 2024-08-28 16:55:02 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 14], ["status", "Backlog"]]
+  ↳ app/views/projects/show.html.erb:52
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 14], ["status", "In_progress"]]
+  ↳ app/views/projects/show.html.erb:63
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 14], ["status", "Completed"]]
+  ↳ app/views/projects/show.html.erb:74
+  Rendered projects/show.html.erb within layouts/application (Duration: 10.7ms | Allocations: 7879)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 8349)
+Completed 200 OK in 39ms (Views: 11.1ms | ActiveRecord: 1.4ms | Allocations: 16491)
+
+
+Started GET "/projects/14/tasks" for 127.0.0.1 at 2024-08-28 16:55:11 +0530
+Processing by TasksController#index as HTML
+  Parameters: {"project_id"=>"14"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:39:in `set_project'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 14]]
+  ↳ app/views/tasks/index.html.erb:13
+  Rendered tasks/index.html.erb within layouts/application (Duration: 8.0ms | Allocations: 1758)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 2213)
+Completed 200 OK in 27ms (Views: 12.7ms | ActiveRecord: 1.0ms | Allocations: 4551)
+
+
+Started POST "/projects/14/tasks" for 127.0.0.1 at 2024-08-28 16:55:18 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "task"=>{"title"=>"vv", "description"=>"vv", "status"=>"backlog"}, "commit"=>"Add Task", "project_id"=>"14"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:39:in `set_project'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:11:in `create'
+  [1m[36mTask Create (1.7ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "description", "status", "project_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "vv"], ["description", "vv"], ["status", "Backlog"], ["project_id", 14], ["created_at", "2024-08-28 11:25:18.760416"], ["updated_at", "2024-08-28 11:25:18.760416"]]
+  ↳ app/controllers/tasks_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:11:in `create'
+Redirected to http://localhost:3000/projects/14
+Completed 302 Found in 13ms (ActiveRecord: 2.1ms | Allocations: 4233)
+
+
+Started GET "/projects/14" for 127.0.0.1 at 2024-08-28 16:55:18 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 14], ["status", "Backlog"]]
+  ↳ app/views/projects/show.html.erb:52
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 14], ["status", "In_progress"]]
+  ↳ app/views/projects/show.html.erb:63
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 14], ["status", "Completed"]]
+  ↳ app/views/projects/show.html.erb:74
+  Rendered projects/show.html.erb within layouts/application (Duration: 4.4ms | Allocations: 2789)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 3232)
+Completed 200 OK in 9ms (Views: 5.2ms | ActiveRecord: 0.3ms | Allocations: 5309)
+
+
+Started PATCH "/projects/14/tasks/28/update_status" for 127.0.0.1 at 2024-08-28 16:55:20 +0530
+Processing by TasksController#update_status as */*
+  Parameters: {"status"=>"in_progress", "project_id"=>"14", "id"=>"28", "task"=>{"status"=>"in_progress"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:39:in `set_project'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["project_id", 14], ["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:43:in `set_task'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:28:in `update_status'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:29:in `update_status'
+  [1m[36mTask Update (1.3ms)[0m  [1m[33mUPDATE "tasks" SET "status" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["status", "In_progress"], ["updated_at", "2024-08-28 11:25:20.723195"], ["id", 28]]
+  ↳ app/controllers/tasks_controller.rb:29:in `update_status'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:29:in `update_status'
+Completed 200 OK in 18ms (Views: 0.2ms | ActiveRecord: 2.2ms | Allocations: 5763)
+
+
+Started PATCH "/projects/14/tasks/28/update_status" for 127.0.0.1 at 2024-08-28 16:55:21 +0530
+Processing by TasksController#update_status as */*
+  Parameters: {"status"=>"completed", "project_id"=>"14", "id"=>"28", "task"=>{"status"=>"completed"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:39:in `set_project'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["project_id", 14], ["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:43:in `set_task'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:28:in `update_status'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:29:in `update_status'
+  [1m[36mTask Update (1.0ms)[0m  [1m[33mUPDATE "tasks" SET "status" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["status", "Completed"], ["updated_at", "2024-08-28 11:25:21.326366"], ["id", 28]]
+  ↳ app/controllers/tasks_controller.rb:29:in `update_status'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:29:in `update_status'
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 1.4ms | Allocations: 5052)
+
+
+Started GET "/projects/14/tasks" for 127.0.0.1 at 2024-08-28 16:55:22 +0530
+Processing by TasksController#index as HTML
+  Parameters: {"project_id"=>"14"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:39:in `set_project'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 14]]
+  ↳ app/views/tasks/index.html.erb:13
+  Rendered tasks/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 682)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 1137)
+Completed 200 OK in 8ms (Views: 3.0ms | ActiveRecord: 0.3ms | Allocations: 3220)
+
+
+Started GET "/projects/13" for 127.0.0.1 at 2024-08-28 16:55:28 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 13], ["status", "Backlog"]]
+  ↳ app/views/projects/show.html.erb:52
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 13], ["status", "In_progress"]]
+  ↳ app/views/projects/show.html.erb:63
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 13], ["status", "Completed"]]
+  ↳ app/views/projects/show.html.erb:74
+  Rendered projects/show.html.erb within layouts/application (Duration: 8.5ms | Allocations: 2771)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 3214)
+Completed 200 OK in 20ms (Views: 10.3ms | ActiveRecord: 0.6ms | Allocations: 5279)
+
+
+Started PATCH "/projects/13/tasks/27/update_status" for 127.0.0.1 at 2024-08-28 16:55:30 +0530
+Processing by TasksController#update_status as */*
+  Parameters: {"status"=>"in_progress", "project_id"=>"13", "id"=>"27", "task"=>{"status"=>"in_progress"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:39:in `set_project'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["project_id", 13], ["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:43:in `set_task'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:28:in `update_status'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:29:in `update_status'
+  [1m[36mTask Update (1.3ms)[0m  [1m[33mUPDATE "tasks" SET "status" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["status", "In_progress"], ["updated_at", "2024-08-28 11:25:30.662665"], ["id", 27]]
+  ↳ app/controllers/tasks_controller.rb:29:in `update_status'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:29:in `update_status'
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 1.8ms | Allocations: 5048)
+
+
+Started GET "/projects/13/tasks" for 127.0.0.1 at 2024-08-28 16:55:32 +0530
+Processing by TasksController#index as HTML
+  Parameters: {"project_id"=>"13"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:39:in `set_project'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 13]]
+  ↳ app/views/tasks/index.html.erb:13
+  Rendered tasks/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 681)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 1136)
+Completed 200 OK in 9ms (Views: 4.5ms | ActiveRecord: 0.3ms | Allocations: 3211)
+
+

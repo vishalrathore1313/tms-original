@@ -50,10 +50,18 @@
   <div class="form-container">
     <h1 class="text-center">Create a New Project</h1>
     <%= form_with(model: @project) do |f| %>
+
       <div class="form-group">
         <%= f.label :title, 'Project Title' %>
         <%= f.text_field :title, class: 'form-control' %>
       </div>
+      
+
+      <div class="form-group">
+        <%= f.label :files, 'Upload Files' %>
+        <%= f.file_field :files,multiple: true, class: 'form-control' %>
+      </div>
+
       <div class="text-center">
         <%= f.submit 'Create New Project', class: 'btn btn-primary' %>
       </div>
@@ -67,9 +75,22 @@
 
         <%= link_to project.id, project_path(project), class: 'text-dark' %>.
         <%= link_to project.title, project_path(project), class: 'text-dark' %>
+
+
+
+        <% if project.files.attached? %>
+          <% project.files.each do |file| %>
+        
+            <p> **<%= link_to "Attached File", rails_blob_path(file, disposition: "inline"), target: "_blank", class: "file-link" %>**</p>
+      
+          <% end %>
+        
+        <% else %>
+            <p>**No files uploaded**</p>
+        <% end %>
       </li>
-    <% end %>
-  </ul>
+   <% end %>
+</ul> 
 
 </body>
 </html>

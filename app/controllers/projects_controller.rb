@@ -7,9 +7,9 @@ class ProjectsController < ApplicationController
   def show
     @project = Project.find(params[:id])
     @tasks = @project.tasks
-    @tasks = @project.tasks.where(status: 'Backlog')
-    @tasks = @project.tasks.where(status: 'Backlog')
-    @tasks = @project.tasks.where(status: 'Backlog')
+  #   @tasks = @project.tasks.where(status: 'Backlog')
+  #   @tasks = @project.tasks.where(status: 'Backlog')
+  #   @tasks = @project.tasks.where(status: 'Backlog')
   end
 
   def new
@@ -28,7 +28,7 @@ class ProjectsController < ApplicationController
   private
 
   def project_params
-    params.require(:project).permit(:title)
+    params.require(:project).permit(:title,files: [])
   end
 end
 

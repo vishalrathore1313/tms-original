@@ -3,7 +3,7 @@
 23 aug update
 26 aug update
 27 aug update  drag and drop and status update
-28 aug navbar and logout
+28 aug navbar logout file management
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
