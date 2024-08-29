@@ -20,18 +20,37 @@ Rails.application.routes.draw do
 
   get '/users/sign_out' => 'devise/sessions#destroy'
 
+
+  get 'audit_log', to: 'projects#audit_log' # Adjust the controller and action name as necessary
+
+  post 'revert_version/:id/:version_id', to: 'projects#revert_version', as: 'revert_version'
+
   end
 
 
   root 'projects#index'
  
-  resources :projects do
-      resources :tasks do
-        member do
-          patch :update_status
-        end
-      end  
+resources :projects do
+  
+  resources :tasks do
+    member do
+      patch :update_status
     end
+  end
+  
+  collection do
+    get 'audit_log'
+  end
+
+  member do
+    patch 'revert'
+  end
+
+  member do
+    get 'revert'
+  end
+end
+
   
 
 

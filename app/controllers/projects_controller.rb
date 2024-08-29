@@ -23,6 +23,35 @@ class ProjectsController < ApplicationController
     end
   end
 
+
+
+  # def revert
+    # @project = Project.find(params[:id])
+  #   @version = @project.versions.find(params[:version_id])
+  #   @version.reify.save! # Revert to the selected version
+  #   redirect_to projects_path, notice: "Reverted to previous version."
+  # end
+  
+  def revert
+    @project = Project.find(params[:id])
+    @version = @project.versions.find_by(id: params[:version_id])
+  
+    if @version.present? && @version.reify.present?
+      @version.reify.save! # Revert to the selected version
+      redirect_to projects_path, notice: "Reverted to previous version."
+    else
+      redirect_to projects_path, alert: "Unable to revert to the selected version."
+    end
+  end
+  
+
+  def audit_log
+    # @project = Project.find(params[:id])
+    @versions = PaperTrail::Version.order(created_at: :desc)
+  end
+  
+
+
   private
 
   def project_params

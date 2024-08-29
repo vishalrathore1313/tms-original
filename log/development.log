@@ -41639,3 +41639,1294 @@ Processing by ProjectsController#show as HTML
 Completed 200 OK in 95ms (Views: 17.2ms | ActiveRecord: 1.5ms | Allocations: 106608)
 
 
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /home/hp/Documents/tms_project/tms-original/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2024-08-29 21:10:33 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:73
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 8], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:81
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:81
+  [1m[36mActiveStorage::Attachment Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:81
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 12], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:81
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 12], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:82
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 13], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:81
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 13], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:82
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 14], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:81
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 14], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:82
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 15], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:81
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 15], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:82
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 16], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:81
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 16], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:82
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 17], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:81
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 17], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:82
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 18], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:81
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 19], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:81
+  Rendered projects/index.html.erb within layouts/application (Duration: 248.6ms | Allocations: 178926)
+  Rendered layout layouts/application.html.erb (Duration: 254.3ms | Allocations: 181377)
+Completed 200 OK in 702ms (Views: 265.3ms | ActiveRecord: 9.9ms | Allocations: 371863)
+
+
+Started GET "/projects/18" for 127.0.0.1 at 2024-08-29 21:10:40 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."id" IS NOT NULL[0m  [["project_id", 18]]
+  ↳ app/views/projects/show.html.erb:51
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 18], ["status", "Backlog"]]
+  ↳ app/views/projects/show.html.erb:76
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 18], ["status", "In_progress"]]
+  ↳ app/views/projects/show.html.erb:102
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 18], ["status", "Completed"]]
+  ↳ app/views/projects/show.html.erb:126
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/views/projects/show.html.erb:130
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/views/projects/show.html.erb:130
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/views/projects/show.html.erb:130
+  [1m[36mCACHE Task Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/views/projects/show.html.erb:130
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/views/projects/show.html.erb:130
+  Rendered projects/show.html.erb within layouts/application (Duration: 130.7ms | Allocations: 12615)
+  Rendered layout layouts/application.html.erb (Duration: 131.8ms | Allocations: 13085)
+Completed 200 OK in 196ms (Views: 132.0ms | ActiveRecord: 1.9ms | Allocations: 74572)
+
+
+Started PATCH "/projects/18/tasks/30/update_status" for 127.0.0.1 at 2024-08-29 21:10:43 +0530
+Processing by TasksController#update_status as */*
+  Parameters: {"status"=>"backlog", "project_id"=>"18", "id"=>"30", "task"=>{"status"=>"backlog"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:50:in `set_task'
+  [1m[36mCACHE Task Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:34:in `update_status'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:35:in `update_status'
+  [1m[36mTask Update (1.3ms)[0m  [1m[33mUPDATE "tasks" SET "status" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["status", "Backlog"], ["updated_at", "2024-08-29 15:40:43.614239"], ["id", 30]]
+  ↳ app/controllers/tasks_controller.rb:35:in `update_status'
+  [1m[36mTRANSACTION (57.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:35:in `update_status'
+Completed 200 OK in 79ms (Views: 0.5ms | ActiveRecord: 58.8ms | Allocations: 6229)
+
+
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /home/hp/Documents/tms_project/tms29aug/config/environment.rb:5)
+Started GET "/projects/18" for 127.0.0.1 at 2024-08-29 21:12:54 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."id" IS NOT NULL[0m  [["project_id", 18]]
+  ↳ app/views/projects/show.html.erb:51
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 18], ["status", "Backlog"]]
+  ↳ app/views/projects/show.html.erb:76
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 18], ["status", "In_progress"]]
+  ↳ app/views/projects/show.html.erb:102
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 18], ["status", "Completed"]]
+  ↳ app/views/projects/show.html.erb:126
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/views/projects/show.html.erb:130
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/views/projects/show.html.erb:130
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/views/projects/show.html.erb:130
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/views/projects/show.html.erb:130
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/views/projects/show.html.erb:130
+  Rendered projects/show.html.erb within layouts/application (Duration: 25.6ms | Allocations: 13018)
+  Rendered layout layouts/application.html.erb (Duration: 29.2ms | Allocations: 15497)
+Completed 200 OK in 347ms (Views: 34.0ms | ActiveRecord: 11.1ms | Allocations: 262089)
+
+
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /home/hp/Documents/tms_project/tms29aug/config/environment.rb:5)
+Started GET "/projects/18" for 127.0.0.1 at 2024-08-29 21:25:12 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."id" IS NOT NULL[0m  [["project_id", 18]]
+  ↳ app/views/projects/show.html.erb:51
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 18], ["status", "Backlog"]]
+  ↳ app/views/projects/show.html.erb:76
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 18], ["status", "In_progress"]]
+  ↳ app/views/projects/show.html.erb:102
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 18], ["status", "Completed"]]
+  ↳ app/views/projects/show.html.erb:126
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/views/projects/show.html.erb:130
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/views/projects/show.html.erb:130
+  [1m[36mCACHE Task Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/views/projects/show.html.erb:130
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/views/projects/show.html.erb:130
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/views/projects/show.html.erb:130
+  Rendered projects/show.html.erb within layouts/application (Duration: 39.1ms | Allocations: 13020)
+  Rendered layout layouts/application.html.erb (Duration: 45.1ms | Allocations: 15499)
+Completed 200 OK in 372ms (Views: 51.2ms | ActiveRecord: 5.3ms | Allocations: 261574)
+
+
+Started GET "/" for 127.0.0.1 at 2024-08-29 21:25:19 +0530
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:73
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 8], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:81
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:81
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:81
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 12], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:81
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 12], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:82
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 13], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:81
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 13], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:82
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 14], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:81
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 14], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:82
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 15], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:81
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 15], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:82
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 16], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:81
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 16], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:82
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 17], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:81
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 17], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:82
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 18], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:81
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 19], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:81
+  Rendered projects/index.html.erb within layouts/application (Duration: 179.9ms | Allocations: 169773)
+  Rendered layout layouts/application.html.erb (Duration: 181.4ms | Allocations: 170259)
+Completed 200 OK in 189ms (Views: 177.2ms | ActiveRecord: 5.0ms | Allocations: 171917)
+
+
+Started GET "/" for 127.0.0.1 at 2024-08-29 21:25:21 +0530
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:73
+  [1m[36mActiveStorage::Attachment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 8], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:81
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:81
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:81
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 12], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:81
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 12], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:82
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 13], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:81
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 13], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:82
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 14], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:81
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 14], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:82
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 15], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:81
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 15], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:82
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 16], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:81
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 16], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:82
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 17], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:81
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 17], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:82
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 18], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:81
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 19], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:81
+  Rendered projects/index.html.erb within layouts/application (Duration: 64.8ms | Allocations: 21515)
+  Rendered layout layouts/application.html.erb (Duration: 65.7ms | Allocations: 22001)
+Completed 200 OK in 71ms (Views: 62.2ms | ActiveRecord: 4.2ms | Allocations: 23599)
+
+
+Started GET "/" for 127.0.0.1 at 2024-08-29 21:25:21 +0530
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:73
+  [1m[36mActiveStorage::Attachment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 8], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:81
+  [1m[36mActiveStorage::Attachment Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:81
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:81
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 12], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:81
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 12], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:82
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 13], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:81
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 13], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:82
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 14], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:81
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 14], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:82
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 15], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:81
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 15], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:82
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 16], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:81
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 16], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:82
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 17], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:81
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 17], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:82
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 18], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:81
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 19], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:81
+  Rendered projects/index.html.erb within layouts/application (Duration: 100.0ms | Allocations: 21513)
+  Rendered layout layouts/application.html.erb (Duration: 100.8ms | Allocations: 21999)
+Completed 200 OK in 109ms (Views: 96.8ms | ActiveRecord: 5.1ms | Allocations: 23579)
+
+
+Started GET "/" for 127.0.0.1 at 2024-08-29 21:26:59 +0530
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  Rendered projects/index.html.erb within layouts/application (Duration: 31.7ms | Allocations: 6764)
+  Rendered layout layouts/application.html.erb (Duration: 32.1ms | Allocations: 6840)
+Completed 500 Internal Server Error in 77ms (ActiveRecord: 3.3ms | Allocations: 31100)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `audit_log_projects_path' for #<ActionView::Base:0x00000000014b18>):
+    42:   <nav class="navbar navbar-custom">
+    43:     <a class="navbar-brand" href="#">My Projects</a>
+    44:     <div class="ml-auto">
+    45:     <%= link_to 'Audit Log', audit_log_projects_path, class: 'btn btn-light mx-2' %>
+    46:     </div>
+    47:     <div class="ml-auto">
+    48:       <%= link_to 'Logout', destroy_user_session_path, data: {turbo_method: :delete}, class: 'btn btn-light' %>
+  
+app/views/projects/index.html.erb:45
+Started GET "/" for 127.0.0.1 at 2024-08-29 21:33:13 +0530
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 2.0ms | Allocations: 25073)
+
+
+  
+NameError (undefined local variable or method `has_paper_trail' for Project:Class
+Did you mean?  has_query_constraints?):
+  
+app/models/project.rb:6:in `<class:Project>'
+app/models/project.rb:1:in `<main>'
+app/controllers/projects_controller.rb:3:in `index'
+Started GET "/" for 127.0.0.1 at 2024-08-29 21:34:29 +0530
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 0.2ms | Allocations: 12210)
+
+
+  
+NameError (undefined local variable or method `has_paper_trail' for Project:Class
+Did you mean?  has_query_constraints?):
+  
+app/models/project.rb:6:in `<class:Project>'
+app/models/project.rb:1:in `<main>'
+app/controllers/projects_controller.rb:3:in `index'
+Started GET "/" for 127.0.0.1 at 2024-08-29 21:34:32 +0530
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 0.1ms | Allocations: 9941)
+
+
+  
+NameError (undefined local variable or method `has_paper_trail' for Project:Class
+Did you mean?  has_query_constraints?):
+  
+app/models/project.rb:6:in `<class:Project>'
+app/models/project.rb:1:in `<main>'
+app/controllers/projects_controller.rb:3:in `index'
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /home/hp/Documents/tms_project/tms29aug/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2024-08-29 21:34:48 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:76
+  [1m[36mActiveStorage::Attachment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 8], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 12], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 12], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:85
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:87
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 13], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 13], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:85
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:87
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 14], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 14], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:85
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:87
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 15], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 15], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:85
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:87
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 16], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 16], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:85
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:87
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 17], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 17], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:85
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:87
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 18], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 19], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  Rendered projects/index.html.erb within layouts/application (Duration: 206.9ms | Allocations: 174963)
+  Rendered layout layouts/application.html.erb (Duration: 213.4ms | Allocations: 177411)
+Completed 200 OK in 426ms (Views: 215.3ms | ActiveRecord: 8.7ms | Allocations: 362134)
+
+
+Started GET "/projects/audit_log" for 127.0.0.1 at 2024-08-29 21:34:50 +0530
+Processing by ProjectsController#audit_log as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/audit_log.html.erb within layouts/application
+  Rendered projects/audit_log.html.erb within layouts/application (Duration: 5.1ms | Allocations: 2585)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 2660)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.4ms | Allocations: 4242)
+
+
+  
+ActionView::Template::Error (undefined method `any?' for nil:NilClass):
+    1: <!-- app/views/projects/audit_log.html.erb -->
+    2: <h1>Audit Log</h1>
+    3: <% if @versions.any? %>
+    4:   <table class="table">
+    5:     <thead>
+    6:       <tr>
+  
+app/views/projects/audit_log.html.erb:3
+Started GET "/" for 127.0.0.1 at 2024-08-29 21:36:47 +0530
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:76
+  [1m[36mActiveStorage::Attachment Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 8], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 12], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 12], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:85
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:87
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 13], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 13], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:85
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:87
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 14], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 14], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:85
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:87
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 15], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 15], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:85
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:87
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 16], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 16], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:85
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:87
+  [1m[36mActiveStorage::Attachment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 17], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 17], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:85
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:87
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 18], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 19], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  Rendered projects/index.html.erb within layouts/application (Duration: 105.8ms | Allocations: 37061)
+  Rendered layout layouts/application.html.erb (Duration: 109.3ms | Allocations: 39406)
+Completed 200 OK in 188ms (Views: 105.6ms | ActiveRecord: 10.4ms | Allocations: 67152)
+
+
+Started GET "/projects/audit_log" for 127.0.0.1 at 2024-08-29 21:36:48 +0530
+Processing by ProjectsController#audit_log as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.7ms | Allocations: 2219)
+
+
+  
+ActiveRecord::StatementInvalid (Could not find table 'versions'):
+  
+app/controllers/projects_controller.rb:38:in `audit_log'
+Started GET "/projects/audit_log" for 127.0.0.1 at 2024-08-29 21:36:56 +0530
+Processing by ProjectsController#audit_log as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.6ms | Allocations: 1978)
+
+
+  
+ActiveRecord::StatementInvalid (Could not find table 'versions'):
+  
+app/controllers/projects_controller.rb:38:in `audit_log'
+Started GET "/projects/audit_log" for 127.0.0.1 at 2024-08-29 21:38:26 +0530
+Processing by ProjectsController#audit_log as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.3ms | Allocations: 1972)
+
+
+  
+ActiveRecord::StatementInvalid (Could not find table 'versions'):
+  
+app/controllers/projects_controller.rb:38:in `audit_log'
+Started GET "/" for 127.0.0.1 at 2024-08-29 21:40:57 +0530
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:76
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 8], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 12], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 12], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:85
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:87
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 13], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 13], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:85
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:87
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 14], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 14], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:85
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:87
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 15], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 15], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:85
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:87
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 16], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 16], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:85
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:87
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 17], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 17], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:85
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:87
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 18], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 19], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  Rendered projects/index.html.erb within layouts/application (Duration: 65.0ms | Allocations: 21567)
+  Rendered layout layouts/application.html.erb (Duration: 65.9ms | Allocations: 22053)
+Completed 200 OK in 74ms (Views: 63.7ms | ActiveRecord: 3.3ms | Allocations: 23629)
+
+
+Started GET "/projects/audit_log" for 127.0.0.1 at 2024-08-29 21:40:59 +0530
+Processing by ProjectsController#audit_log as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.3ms | Allocations: 1998)
+
+
+  
+ActiveRecord::StatementInvalid (Could not find table 'versions'):
+  
+app/controllers/projects_controller.rb:38:in `audit_log'
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /home/hp/Documents/tms_project/tms29aug/config/environment.rb:5)
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /home/hp/Documents/tms_project/tms29aug/config/environment.rb:5)
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (11.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateVersions (20240829161437)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (13.7ms)[0m  [1m[35mCREATE TABLE "versions" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "item_type" varchar NOT NULL, "item_id" bigint NOT NULL, "event" varchar NOT NULL, "whodunnit" varchar, "object" text(1073741823), "created_at" datetime(6))[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_versions_on_item_type_and_item_id" ON "versions" ("item_type", "item_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240829161437') RETURNING "version"[0m
+  [1m[36mTRANSACTION (35.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /home/hp/Documents/tms_project/tms29aug/config/environment.rb:5)
+Started GET "/projects/audit_log" for 127.0.0.1 at 2024-08-29 21:45:06 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#audit_log as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/audit_log.html.erb within layouts/application
+  [1m[36mPaperTrail::Version Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "versions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/projects/audit_log.html.erb:3
+  Rendered projects/audit_log.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1236)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 3792)
+Completed 200 OK in 542ms (Views: 94.7ms | ActiveRecord: 6.2ms | Allocations: 155855)
+
+
+Started GET "/" for 127.0.0.1 at 2024-08-29 21:45:14 +0530
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:76
+  [1m[36mActiveStorage::Attachment Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 8], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 12], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 12], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:85
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:87
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 13], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 13], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:85
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:87
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 14], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 14], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:85
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:87
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 15], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 15], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:85
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:87
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 16], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 16], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:85
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:87
+  [1m[36mActiveStorage::Attachment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 17], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 17], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:85
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:87
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 18], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 19], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  Rendered projects/index.html.erb within layouts/application (Duration: 285.2ms | Allocations: 174742)
+  Rendered layout layouts/application.html.erb (Duration: 286.1ms | Allocations: 175228)
+Completed 200 OK in 432ms (Views: 281.7ms | ActiveRecord: 6.0ms | Allocations: 210212)
+
+
+Started GET "/projects/audit_log" for 127.0.0.1 at 2024-08-29 21:45:16 +0530
+Processing by ProjectsController#audit_log as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/audit_log.html.erb within layouts/application
+  [1m[36mPaperTrail::Version Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "versions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/projects/audit_log.html.erb:3
+  Rendered projects/audit_log.html.erb within layouts/application (Duration: 3.8ms | Allocations: 544)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 1003)
+Completed 200 OK in 12ms (Views: 5.6ms | ActiveRecord: 0.8ms | Allocations: 2634)
+
+
+Started POST "/projects" for 127.0.0.1 at 2024-08-29 21:46:19 +0530
+Processing by ProjectsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "project"=>{"title"=>"kitty", "files"=>[""]}, "commit"=>"Create New Project"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/projects_controller.rb:19:in `create'
+  [1m[36mProject Create (1.5ms)[0m  [1m[32mINSERT INTO "projects" ("title", "created_at", "updated_at") VALUES (?, ?, ?) RETURNING "id"[0m  [["title", "kitty"], ["created_at", "2024-08-29 16:16:19.876155"], ["updated_at", "2024-08-29 16:16:19.876155"]]
+  ↳ app/controllers/projects_controller.rb:19:in `create'
+  [1m[36mPaperTrail::Version Create (0.3ms)[0m  [1m[32mINSERT INTO "versions" ("item_type", "item_id", "event", "whodunnit", "object", "created_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["item_type", "Project"], ["item_id", 20], ["event", "create"], ["whodunnit", nil], ["object", nil], ["created_at", "2024-08-29 16:16:19.876155"]]
+  ↳ app/controllers/projects_controller.rb:19:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 20], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/controllers/projects_controller.rb:19:in `create'
+  [1m[36mTRANSACTION (60.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/projects_controller.rb:19:in `create'
+Redirected to http://127.0.0.1:3000/projects/20
+Completed 302 Found in 202ms (ActiveRecord: 62.4ms | Allocations: 71422)
+
+
+Started GET "/projects/20" for 127.0.0.1 at 2024-08-29 21:46:20 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."id" IS NOT NULL[0m  [["project_id", 20]]
+  ↳ app/views/projects/show.html.erb:51
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 20], ["status", "Backlog"]]
+  ↳ app/views/projects/show.html.erb:76
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 20], ["status", "In_progress"]]
+  ↳ app/views/projects/show.html.erb:102
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."status" = ?[0m  [["project_id", 20], ["status", "Completed"]]
+  ↳ app/views/projects/show.html.erb:126
+  Rendered projects/show.html.erb within layouts/application (Duration: 99.9ms | Allocations: 7083)
+  Rendered layout layouts/application.html.erb (Duration: 102.6ms | Allocations: 7526)
+Completed 200 OK in 209ms (Views: 103.3ms | ActiveRecord: 1.3ms | Allocations: 72436)
+
+
+Started GET "/projects" for 127.0.0.1 at 2024-08-29 21:46:23 +0530
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:76
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 8], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 12], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 12], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:85
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:87
+  [1m[36mActiveStorage::Attachment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 13], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 13], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:85
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:87
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 14], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 14], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:85
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:87
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 15], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 15], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:85
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:87
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 16], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 16], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:85
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:87
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 17], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 17], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:85
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:87
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 18], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 19], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 20], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  Rendered projects/index.html.erb within layouts/application (Duration: 64.1ms | Allocations: 22558)
+  Rendered layout layouts/application.html.erb (Duration: 65.2ms | Allocations: 23044)
+Completed 200 OK in 74ms (Views: 62.3ms | ActiveRecord: 4.2ms | Allocations: 24658)
+
+
+Started GET "/projects" for 127.0.0.1 at 2024-08-29 21:46:24 +0530
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:76
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 8], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 12], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 12], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:85
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:87
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 13], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 13], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:85
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:87
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 14], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 14], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:85
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:87
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 15], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 15], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:85
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:87
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 16], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 16], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:85
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:87
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 17], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 17], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:85
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:87
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 18], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 19], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 20], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  Rendered projects/index.html.erb within layouts/application (Duration: 67.2ms | Allocations: 22552)
+  Rendered layout layouts/application.html.erb (Duration: 68.4ms | Allocations: 23038)
+Completed 200 OK in 77ms (Views: 67.3ms | ActiveRecord: 3.6ms | Allocations: 24660)
+
+
+Started GET "/projects/audit_log" for 127.0.0.1 at 2024-08-29 21:46:28 +0530
+Processing by ProjectsController#audit_log as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/audit_log.html.erb within layouts/application
+  [1m[36mPaperTrail::Version Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "versions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/projects/audit_log.html.erb:3
+  [1m[36mPaperTrail::Version Load (0.2ms)[0m  [1m[34mSELECT "versions".* FROM "versions" ORDER BY "versions"."created_at" DESC[0m
+  ↳ app/views/projects/audit_log.html.erb:15
+  [1m[36mPaperTrail::Version Load (1.1ms)[0m  [1m[34mSELECT "versions"."id" FROM "versions" WHERE "versions"."item_type" = ? AND "versions"."item_id" = ? ORDER BY "versions"."id" ASC[0m  [["item_type", "Project"], ["item_id", 20]]
+  ↳ app/views/projects/audit_log.html.erb:17
+  Rendered projects/audit_log.html.erb within layouts/application (Duration: 10.8ms | Allocations: 2008)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 2466)
+Completed 200 OK in 21ms (Views: 13.1ms | ActiveRecord: 2.1ms | Allocations: 4071)
+
+
+Started GET "/projects/20/revert?version_id=1" for 127.0.0.1 at 2024-08-29 21:46:36 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/projects/20/revert"):
+  
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /home/hp/Documents/tms_project/tms29aug/config/environment.rb:5)
+Started GET "/projects/20/revert?version_id=1" for 127.0.0.1 at 2024-08-29 21:55:21 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#revert as HTML
+  Parameters: {"version_id"=>"1", "id"=>"20"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:29:in `revert'
+  [1m[36mPaperTrail::Version Load (0.2ms)[0m  [1m[34mSELECT "versions".* FROM "versions" WHERE "versions"."item_id" = ? AND "versions"."item_type" = ? AND "versions"."id" = ? ORDER BY "versions"."created_at" ASC, "versions"."id" ASC LIMIT ?[0m  [["item_id", 20], ["item_type", "Project"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:30:in `revert'
+Completed 500 Internal Server Error in 263ms (ActiveRecord: 4.6ms | Allocations: 250696)
+
+
+  
+NoMethodError (undefined method `save!' for nil:NilClass):
+  
+app/controllers/projects_controller.rb:31:in `revert'
+Started GET "/projects/20/revert?version_id=1" for 127.0.0.1 at 2024-08-29 21:58:24 +0530
+Processing by ProjectsController#revert as HTML
+  Parameters: {"version_id"=>"1", "id"=>"20"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:36:in `revert'
+  [1m[36mPaperTrail::Version Load (0.2ms)[0m  [1m[34mSELECT "versions".* FROM "versions" WHERE "versions"."item_id" = ? AND "versions"."item_type" = ? AND "versions"."id" = ? ORDER BY "versions"."created_at" ASC, "versions"."id" ASC LIMIT ?[0m  [["item_id", 20], ["item_type", "Project"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:37:in `revert'
+Redirected to http://127.0.0.1:3000/projects
+Completed 302 Found in 57ms (ActiveRecord: 3.7ms | Allocations: 29439)
+
+
+Started GET "/projects" for 127.0.0.1 at 2024-08-29 21:58:24 +0530
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:76
+  [1m[36mActiveStorage::Attachment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 8], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 12], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 12], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:85
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:87
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 13], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 13], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:85
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:87
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 14], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 14], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:85
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:87
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 15], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 15], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:85
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:87
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 16], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 16], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:85
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:87
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 17], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 17], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:85
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:87
+  [1m[36mActiveStorage::Attachment Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 18], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 19], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 20], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  Rendered projects/index.html.erb within layouts/application (Duration: 434.3ms | Allocations: 172233)
+  Rendered layout layouts/application.html.erb (Duration: 438.2ms | Allocations: 174655)
+Completed 200 OK in 445ms (Views: 434.6ms | ActiveRecord: 5.7ms | Allocations: 177191)
+
+
+Started GET "/projects/audit_log" for 127.0.0.1 at 2024-08-29 21:58:26 +0530
+Processing by ProjectsController#audit_log as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/audit_log.html.erb within layouts/application
+  [1m[36mPaperTrail::Version Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "versions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/projects/audit_log.html.erb:3
+  [1m[36mPaperTrail::Version Load (0.6ms)[0m  [1m[34mSELECT "versions".* FROM "versions" ORDER BY "versions"."created_at" DESC[0m
+  ↳ app/views/projects/audit_log.html.erb:15
+  [1m[36mPaperTrail::Version Load (0.5ms)[0m  [1m[34mSELECT "versions"."id" FROM "versions" WHERE "versions"."item_type" = ? AND "versions"."item_id" = ? ORDER BY "versions"."id" ASC[0m  [["item_type", "Project"], ["item_id", 20]]
+  ↳ app/views/projects/audit_log.html.erb:17
+  Rendered projects/audit_log.html.erb within layouts/application (Duration: 16.4ms | Allocations: 2656)
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | Allocations: 3141)
+Completed 200 OK in 28ms (Views: 18.8ms | ActiveRecord: 1.4ms | Allocations: 4871)
+
+
+Started GET "/projects/20/revert?version_id=1" for 127.0.0.1 at 2024-08-29 21:58:29 +0530
+Processing by ProjectsController#revert as HTML
+  Parameters: {"version_id"=>"1", "id"=>"20"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:36:in `revert'
+  [1m[36mPaperTrail::Version Load (0.1ms)[0m  [1m[34mSELECT "versions".* FROM "versions" WHERE "versions"."item_id" = ? AND "versions"."item_type" = ? AND "versions"."id" = ? ORDER BY "versions"."created_at" ASC, "versions"."id" ASC LIMIT ?[0m  [["item_id", 20], ["item_type", "Project"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:37:in `revert'
+Redirected to http://127.0.0.1:3000/projects
+Completed 302 Found in 15ms (ActiveRecord: 0.4ms | Allocations: 2915)
+
+
+Started GET "/projects" for 127.0.0.1 at 2024-08-29 21:58:29 +0530
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:76
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 8], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 12], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 12], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:85
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:87
+  [1m[36mActiveStorage::Attachment Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 13], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 13], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:85
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:87
+  [1m[36mActiveStorage::Attachment Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 14], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 14], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:85
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:87
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 15], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 15], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:85
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:87
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 16], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 16], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:85
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:87
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 17], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 17], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:85
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:87
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 18], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 19], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 20], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  Rendered projects/index.html.erb within layouts/application (Duration: 76.5ms | Allocations: 22551)
+  Rendered layout layouts/application.html.erb (Duration: 77.4ms | Allocations: 23037)
+Completed 200 OK in 81ms (Views: 72.8ms | ActiveRecord: 5.3ms | Allocations: 24636)
+
+
+Started GET "/projects/audit_log" for 127.0.0.1 at 2024-08-29 21:58:39 +0530
+Processing by ProjectsController#audit_log as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/audit_log.html.erb within layouts/application
+  [1m[36mPaperTrail::Version Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "versions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/projects/audit_log.html.erb:3
+  [1m[36mPaperTrail::Version Load (0.1ms)[0m  [1m[34mSELECT "versions".* FROM "versions" ORDER BY "versions"."created_at" DESC[0m
+  ↳ app/views/projects/audit_log.html.erb:15
+  [1m[36mPaperTrail::Version Load (0.1ms)[0m  [1m[34mSELECT "versions"."id" FROM "versions" WHERE "versions"."item_type" = ? AND "versions"."item_id" = ? ORDER BY "versions"."id" ASC[0m  [["item_type", "Project"], ["item_id", 20]]
+  ↳ app/views/projects/audit_log.html.erb:17
+  Rendered projects/audit_log.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1859)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 2317)
+Completed 200 OK in 9ms (Views: 5.3ms | ActiveRecord: 0.4ms | Allocations: 3927)
+
+
+Started GET "/projects/20/revert?version_id=1" for 127.0.0.1 at 2024-08-29 21:58:45 +0530
+Processing by ProjectsController#revert as HTML
+  Parameters: {"version_id"=>"1", "id"=>"20"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:36:in `revert'
+  [1m[36mPaperTrail::Version Load (0.4ms)[0m  [1m[34mSELECT "versions".* FROM "versions" WHERE "versions"."item_id" = ? AND "versions"."item_type" = ? AND "versions"."id" = ? ORDER BY "versions"."created_at" ASC, "versions"."id" ASC LIMIT ?[0m  [["item_id", 20], ["item_type", "Project"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:37:in `revert'
+Redirected to http://127.0.0.1:3000/projects
+Completed 302 Found in 16ms (ActiveRecord: 0.6ms | Allocations: 2935)
+
+
+Started GET "/projects" for 127.0.0.1 at 2024-08-29 21:58:45 +0530
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:76
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 8], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 12], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 12], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:85
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:87
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 13], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 13], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:85
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:87
+  [1m[36mActiveStorage::Attachment Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 14], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 14], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:85
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:87
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 15], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 15], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:85
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:87
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 16], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 16], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:85
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:87
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 17], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 17], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:85
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:87
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 18], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 19], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Attachment Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 20], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:84
+  Rendered projects/index.html.erb within layouts/application (Duration: 89.5ms | Allocations: 22551)
+  Rendered layout layouts/application.html.erb (Duration: 91.0ms | Allocations: 23037)
+Completed 200 OK in 98ms (Views: 86.2ms | ActiveRecord: 6.8ms | Allocations: 24633)
+
+
+Started GET "/projects/audit_log" for 127.0.0.1 at 2024-08-29 21:58:52 +0530
+Processing by ProjectsController#audit_log as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/audit_log.html.erb within layouts/application
+  [1m[36mPaperTrail::Version Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "versions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/projects/audit_log.html.erb:3
+  [1m[36mPaperTrail::Version Load (0.1ms)[0m  [1m[34mSELECT "versions".* FROM "versions" ORDER BY "versions"."created_at" DESC[0m
+  ↳ app/views/projects/audit_log.html.erb:15
+  [1m[36mPaperTrail::Version Load (0.3ms)[0m  [1m[34mSELECT "versions"."id" FROM "versions" WHERE "versions"."item_type" = ? AND "versions"."item_id" = ? ORDER BY "versions"."id" ASC[0m  [["item_type", "Project"], ["item_id", 20]]
+  ↳ app/views/projects/audit_log.html.erb:17
+  Rendered projects/audit_log.html.erb within layouts/application (Duration: 11.0ms | Allocations: 1856)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 2314)
+Completed 200 OK in 23ms (Views: 13.7ms | ActiveRecord: 1.1ms | Allocations: 3932)
+
+
+Started GET "/projects" for 127.0.0.1 at 2024-08-29 22:03:02 +0530
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:75
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 8], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:83
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:83
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:83
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 12], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:83
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 12], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:86
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 13], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:83
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 13], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:86
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 14], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:83
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 14], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:86
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 15], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:83
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 15], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:86
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 16], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:83
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 16], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:86
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 17], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:83
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 17], ["record_type", "Project"], ["name", "files"]]
+  ↳ app/views/projects/index.html.erb:84
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:86
+  [1m[36mActiveStorage::Attachment Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 18], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:83
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 19], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:83
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 20], ["record_type", "Project"], ["name", "files"], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:83
+  Rendered projects/index.html.erb within layouts/application (Duration: 109.9ms | Allocations: 38070)
+  Rendered layout layouts/application.html.erb (Duration: 113.1ms | Allocations: 40420)
+Completed 200 OK in 174ms (Views: 112.2ms | ActiveRecord: 9.3ms | Allocations: 68172)
+
+
+Started GET "/projects/audit_log" for 127.0.0.1 at 2024-08-29 22:03:05 +0530
+Processing by ProjectsController#audit_log as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/audit_log.html.erb within layouts/application
+  [1m[36mPaperTrail::Version Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "versions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/projects/audit_log.html.erb:3
+  [1m[36mPaperTrail::Version Load (0.3ms)[0m  [1m[34mSELECT "versions".* FROM "versions" ORDER BY "versions"."created_at" DESC[0m
+  ↳ app/views/projects/audit_log.html.erb:15
+  [1m[36mPaperTrail::Version Load (0.7ms)[0m  [1m[34mSELECT "versions"."id" FROM "versions" WHERE "versions"."item_type" = ? AND "versions"."item_id" = ? ORDER BY "versions"."id" ASC[0m  [["item_type", "Project"], ["item_id", 20]]
+  ↳ app/views/projects/audit_log.html.erb:17
+  Rendered projects/audit_log.html.erb within layouts/application (Duration: 18.1ms | Allocations: 2234)
+  Rendered layout layouts/application.html.erb (Duration: 19.7ms | Allocations: 2719)
+Completed 200 OK in 28ms (Views: 19.8ms | ActiveRecord: 1.3ms | Allocations: 4390)
+
+
+Started GET "/projects/audit_log" for 127.0.0.1 at 2024-08-29 22:03:25 +0530
+Processing by ProjectsController#audit_log as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/audit_log.html.erb within layouts/application
+  [1m[36mPaperTrail::Version Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "versions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/projects/audit_log.html.erb:3
+  [1m[36mPaperTrail::Version Load (0.1ms)[0m  [1m[34mSELECT "versions".* FROM "versions" ORDER BY "versions"."created_at" DESC[0m
+  ↳ app/views/projects/audit_log.html.erb:15
+  [1m[36mPaperTrail::Version Load (0.1ms)[0m  [1m[34mSELECT "versions"."id" FROM "versions" WHERE "versions"."item_type" = ? AND "versions"."item_id" = ? ORDER BY "versions"."id" ASC[0m  [["item_type", "Project"], ["item_id", 20]]
+  ↳ app/views/projects/audit_log.html.erb:17
+  Rendered projects/audit_log.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1856)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 2314)
+Completed 200 OK in 10ms (Views: 5.9ms | ActiveRecord: 0.4ms | Allocations: 3930)
+
+

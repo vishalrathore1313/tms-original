@@ -1,6 +1,8 @@
 class Task < ApplicationRecord
   belongs_to :project
 
+  has_paper_trail
+
   belongs_to :dependent_task, class_name: 'Task', optional: true
 
   has_many :dependent_tasks, class_name: 'Task', foreign_key: 'dependent_task_id'

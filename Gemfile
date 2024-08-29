@@ -16,6 +16,8 @@ gem 'sassc-rails'
 
 gem 'rails-ujs'
 
+gem 'paper_trail'
+
 # gem 'bootstrap-sass'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]

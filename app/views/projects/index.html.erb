@@ -38,13 +38,15 @@
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-custom">
-    <a class="navbar-brand" href="#">My Projects</a>
-    <div class="ml-auto">
-      <%= link_to 'Logout', destroy_user_session_path, data: {turbo_method: :delete}, class: 'btn btn-light' %>
-    </div>
-  </nav>
+<!-- Navbar -->
+<nav class="navbar navbar-custom">
+  <a class="navbar-brand" href="#">My Projects</a>
+  <div class="ml-auto d-flex align-items-center">
+    <%= link_to 'Audit Log', audit_log_projects_path, class: 'btn btn-light mx-2' %>
+    <%= link_to 'Logout', destroy_user_session_path, data: { turbo_method: :delete }, class: 'btn btn-light' %>
+  </div>
+</nav>
+
 
   <!-- Form Container -->
   <div class="form-container">
