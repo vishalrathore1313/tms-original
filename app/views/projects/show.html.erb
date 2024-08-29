@@ -1,17 +1,10 @@
+
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-grey">
+<nav class="navbar navbar-custom">
   <a class="navbar-brand" href="#">Tasks of <%= @project.title %></a>
-  <div class="collapse navbar-collapse">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <%= link_to 'Projects', projects_path, class: 'nav-link' %>
-      </li>
-    </ul>
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'btn btn-light' %>
-      </li>
-    </ul>
+  <div class="ml-auto d-flex align-items-center">
+    <%= link_to 'Projects', projects_path, class: 'btn btn-light mx-2' %>
+    <%= link_to 'Logout', destroy_user_session_path, data: { turbo_method: :delete }, class: 'btn btn-light' %>
   </div>
 </nav>
 
@@ -53,7 +46,8 @@
 
             <div class="form-group">
               <%= f.label :status, 'Task Status' %>
-              <%= f.select :status, Task.statuses.keys.map { |status| [status.humanize, status] }, {}, class: 'form-control' %>
+              <%= f.hidden_field :status, value: 'backlog' %>
+              <input type="text" class="form-control" value="Backlog" disabled>
             </div>
 
             <%= f.submit 'Add Task', class: 'btn btn-primary' %>
@@ -66,81 +60,68 @@
 </div>
 
 
-
 <!-- Drag and Drop Sections -->
 <div class="container mt-5">
-  <div class="row">
+  <div class="row d-flex align-items-stretch">
     <div class="col-md-4">
-      <div class="task-list" data-status="backlog">
+      <div class="task-list h-100" data-status="backlog">
         <h3 class="text-dark-grey">Backlog</h3>
         <% @project.tasks.where(status: 'backlog').each do |task| %>
           <div class="task-card" data-task-id="<%= task.id %>" data-project-id="<%= task.project_id %>" draggable="true">
-            <p>Task ID:<%= task.id %></p>
+            <p>Task ID: <%= task.id %></p>
+            <p>Task Title: <%= task.title %></p>
+            <p>Description: <%= task.description %></p>
             
             <% if task.dependent_task %>
-            <p>Depends on: <%= task.dependent_task.title %> (Status: <%= task.dependent_task.status %>)</p>
-            <% end %>
-
-
-            <p>Task Title:<%= task.title %></p>
-            <p>Description:<%= task.description %></p>
-
-
-            <!-- Include logic to display alerts if dependencies are unmet -->
-            <%if task.dependent_task&.status == 'completed' && task.dependent_task%>
-                   <p style="color: green;">Can move freely</p>   
-             <%else%>
-                   <p style="color: red;">Cannot move this task to <%= task&.status %> until <%= task.dependent_task&.title %> is completed.</p>
+              <p>Depends on: <%= task.dependent_task.title %> (Status: <%= task.dependent_task.status %>)</p>
+              <% if task.dependent_task&.status == 'completed' %>
+                <p style="color: green;">Dependency ended</p>   
+              <% else %>
+                <p style="color: red;">Waiting for task &quot;<%= task.dependent_task&.title %>&quot; to get complete.</p>
+              <% end %>
             <% end %>
           </div>
         <% end %>
       </div>
     </div>
     <div class="col-md-4">
-      <div class="task-list" data-status="in_progress">
+      <div class="task-list h-100" data-status="in_progress">
         <h3 class="text-dark-grey">In Progress</h3>
         <% @project.tasks.where(status: 'in_progress').each do |task| %>
           <div class="task-card" data-task-id="<%= task.id %>" data-project-id="<%= task.project_id %>" draggable="true">
-            <p>Task ID:<%= task.id %></p>
+            <p>Task ID: <%= task.id %></p>
+            <p>Task Title: <%= task.title %></p>
+            <p>Description: <%= task.description %></p>
             
             <% if task.dependent_task %>
-            <p>Depends on: <%= task.dependent_task.title %> (Status: <%= task.dependent_task.status %>)</p>
-            <% end %>
-            
-            <p>Task Title:<%= task.title %></p>
-            <p>Description:<%= task.description %></p>
-
-              <!-- Include logic to display alerts if dependencies are unmet -->
-            <%if task.dependent_task&.status == 'completed' && task.dependent_task %>
-                   <p style="color: green;">Can move freely</p>
-             <%else%>
-                   <p style="color: red;">Cannot move this task to <%= task&.status %> until <%= task.dependent_task&.title %> is completed.</p>
+              <p>Depends on: <%= task.dependent_task.title %> (Status: <%= task.dependent_task.status %>)</p>
+              <% if task.dependent_task&.status == 'completed' %>
+                <p style="color: green;">Dependency ended</p>   
+              <% else %>
+                <p style="color: red;">Waiting for task &quot;<%= task.dependent_task&.title %>&quot; to get complete.</p>
+              <% end %>
             <% end %>
           </div>
         <% end %>
       </div>
     </div>
     <div class="col-md-4">
-      <div class="task-list" data-status="completed">
+      <div class="task-list h-100" data-status="completed">
         <h3 class="text-dark-grey">Completed</h3>
         <% @project.tasks.where(status: 'completed').each do |task| %>
           <div class="task-card" data-task-id="<%= task.id %>" data-project-id="<%= task.project_id %>" draggable="true">
-            <p>Task ID:<%= task.id %></p>
-
-            <% if task.dependent_task %>
-            <p>Depends on: <%= task.dependent_task.title %> (Status: <%= task.dependent_task.status %>)</p>
-            <% end %>
-
-            <p>Task Title:<%= task.title %></p>
-            <p>Description:<%= task.description %></p>
-
-             <!-- Include logic to display alerts if dependencies are unmet -->
-            <%if task.dependent_task&.status == 'completed' && task&.dependent_task %>
-                   <p style="color: green;">Can move freely</p>     
-             <%else%>
-                   <p style="color: red;">Cannot move this task to <%= task.status %> until <%= task.dependent_task&.title %> is completed.</p>
-            <% end %>
+            <p>Task ID: <%= task.id %></p>
+            <p>Task Title: <%= task.title %></p>
+            <p>Description: <%= task.description %></p>
             
+            <% if task.dependent_task %>
+              <p>Depends on: <%= task.dependent_task.title %> (Status: <%= task.dependent_task.status %>)</p>
+              <% if task.dependent_task&.status == 'completed' %>
+                <p style="color: green;">Dependency ended</p>       
+              <% else %>
+                <p style="color: red;">Waiting for task &quot;<%= task.dependent_task&.title %>&quot; to get complete.</p>
+              <% end %>
+            <% end %>
           </div>
         <% end %>
       </div>
