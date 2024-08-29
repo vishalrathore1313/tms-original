@@ -15,25 +15,47 @@
   </div>
 </nav>
 
+
 <div class="container mt-4">
   <!-- Task Creation Form -->
   <div class="row justify-content-center">
     <div class="col-md-6">
       <div class="card bg-grey">
         <div class="card-body">
+          <!-- Display errors if any -->
+          <% if @task && @task.errors.any? %>
+            <div id="error_explanation" class="alert alert-danger">
+              <h4><%= pluralize(@task.errors.count, "error") %> prohibited this task from being saved:</h4>
+              <ul>
+                <% @task.errors.full_messages.each do |message| %>
+                  <li><%= message %></li>
+                <% end %>
+              </ul>
+            </div>
+          <% end %>
+
           <%= form_with(model: [@project, @project.tasks.build], local: true) do |f| %>
+
             <div class="form-group">
               <%= f.label :title, 'Task Title' %>
               <%= f.text_field :title, class: 'form-control' %>
             </div>
+
             <div class="form-group">
               <%= f.label :description, 'Task Description' %>
               <%= f.text_area :description, class: 'form-control' %>
             </div>
+
+            <div class="form-group">
+              <%= f.label :dependent_task_id, 'Dependent Task' %>
+              <%= f.collection_select :dependent_task_id, @project.tasks.where.not(id: @task&.id), :id, :title, { include_blank: 'None' }, class: 'form-control' %>
+            </div>
+
             <div class="form-group">
               <%= f.label :status, 'Task Status' %>
               <%= f.select :status, Task.statuses.keys.map { |status| [status.humanize, status] }, {}, class: 'form-control' %>
             </div>
+
             <%= f.submit 'Add Task', class: 'btn btn-primary' %>
             <%= link_to 'List', project_tasks_path(@project), class: 'btn btn-secondary' %>
           <% end %>
@@ -43,6 +65,8 @@
   </div>
 </div>
 
+
+
 <!-- Drag and Drop Sections -->
 <div class="container mt-5">
   <div class="row">
@@ -51,8 +75,23 @@
         <h3 class="text-dark-grey">Backlog</h3>
         <% @project.tasks.where(status: 'backlog').each do |task| %>
           <div class="task-card" data-task-id="<%= task.id %>" data-project-id="<%= task.project_id %>" draggable="true">
-            <p><%= task.title %></p>
-            <p><%= task.description %></p>
+            <p>Task ID:<%= task.id %></p>
+            
+            <% if task.dependent_task %>
+            <p>Depends on: <%= task.dependent_task.title %> (Status: <%= task.dependent_task.status %>)</p>
+            <% end %>
+
+
+            <p>Task Title:<%= task.title %></p>
+            <p>Description:<%= task.description %></p>
+
+
+            <!-- Include logic to display alerts if dependencies are unmet -->
+            <%if task.dependent_task&.status == 'completed' && task.dependent_task%>
+                   <p style="color: green;">Can move freely</p>   
+             <%else%>
+                   <p style="color: red;">Cannot move this task to <%= task&.status %> until <%= task.dependent_task&.title %> is completed.</p>
+            <% end %>
           </div>
         <% end %>
       </div>
@@ -62,8 +101,21 @@
         <h3 class="text-dark-grey">In Progress</h3>
         <% @project.tasks.where(status: 'in_progress').each do |task| %>
           <div class="task-card" data-task-id="<%= task.id %>" data-project-id="<%= task.project_id %>" draggable="true">
-            <p><%= task.title %></p>
-            <p><%= task.description %></p>
+            <p>Task ID:<%= task.id %></p>
+            
+            <% if task.dependent_task %>
+            <p>Depends on: <%= task.dependent_task.title %> (Status: <%= task.dependent_task.status %>)</p>
+            <% end %>
+            
+            <p>Task Title:<%= task.title %></p>
+            <p>Description:<%= task.description %></p>
+
+              <!-- Include logic to display alerts if dependencies are unmet -->
+            <%if task.dependent_task&.status == 'completed' && task.dependent_task %>
+                   <p style="color: green;">Can move freely</p>
+             <%else%>
+                   <p style="color: red;">Cannot move this task to <%= task&.status %> until <%= task.dependent_task&.title %> is completed.</p>
+            <% end %>
           </div>
         <% end %>
       </div>
@@ -73,8 +125,22 @@
         <h3 class="text-dark-grey">Completed</h3>
         <% @project.tasks.where(status: 'completed').each do |task| %>
           <div class="task-card" data-task-id="<%= task.id %>" data-project-id="<%= task.project_id %>" draggable="true">
-            <p><%= task.title %></p>
-            <p><%= task.description %></p>
+            <p>Task ID:<%= task.id %></p>
+
+            <% if task.dependent_task %>
+            <p>Depends on: <%= task.dependent_task.title %> (Status: <%= task.dependent_task.status %>)</p>
+            <% end %>
+
+            <p>Task Title:<%= task.title %></p>
+            <p>Description:<%= task.description %></p>
+
+             <!-- Include logic to display alerts if dependencies are unmet -->
+            <%if task.dependent_task&.status == 'completed' && task&.dependent_task %>
+                   <p style="color: green;">Can move freely</p>     
+             <%else%>
+                   <p style="color: red;">Cannot move this task to <%= task.status %> until <%= task.dependent_task&.title %> is completed.</p>
+            <% end %>
+            
           </div>
         <% end %>
       </div>

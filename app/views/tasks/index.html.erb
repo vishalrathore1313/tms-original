@@ -4,6 +4,7 @@
   <table class="table table-bordered table-striped">
     <thead class="thead-dark">
       <tr>
+        <th>Task ID</th>
         <th>Title</th>
         <th>Description</th>
         <th>Status</th>
@@ -12,6 +13,7 @@
     <tbody>
       <% @project.tasks.each do |task| %>
         <tr class="table-secondary">
+          <td><%= task.id %></td>
           <td><%= task.title %></td>
           <td><%= task.description %></td>
           <td><%= task.status.humanize %></td>
