@@ -5,6 +5,8 @@
 27 aug update  drag and drop and status update
 28 aug navbar logout file management
 29 dependecy create
+29 audit and revert
+30 verification error solved  and login 
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
