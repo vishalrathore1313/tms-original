@@ -18,6 +18,9 @@ gem 'rails-ujs'
 
 gem 'paper_trail'
 
+gem 'cancancan', '~> 3.0'
+
+
 # gem 'bootstrap-sass'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]

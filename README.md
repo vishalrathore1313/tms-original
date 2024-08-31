@@ -8,6 +8,8 @@
 29 audit and revert
 30 verification error solved  and login 
 31 aug project and task delete button
+31 aug delete button
+31 apply cancancan
 
 This README would normally document whatever steps are necessary to get the
 application up and running.

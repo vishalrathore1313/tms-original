@@ -26,10 +26,33 @@ class User < ApplicationRecord
     end
   end
 
+
+
+  ROLES = %w[admin manager team_member]
+
+  # Validations
+  validates :role, presence: true, inclusion: { in: ROLES }
+
+  # Method to check if the user is an admin
+  def admin?
+    role == 'admin'
+  end
+
+  # Method to check if the user is a manager
+  def manager?
+    role == 'manager'
+  end
+
+  # Method to check if the user is a team member
+  def team_member?
+    role == 'team_member'
+  end
+
   private
 
   def verification_pending?
     !self.verification
   end
+  
 end
 

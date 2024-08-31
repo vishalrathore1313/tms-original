@@ -1,4 +1,7 @@
 class ProjectsController < ApplicationController
+  load_and_authorize_resource
+
+
   def index
     @projects = Project.all
     @project= Project.new
@@ -51,7 +54,7 @@ class ProjectsController < ApplicationController
   
 
   def audit_log
-    # @project = Project.find(params[:id])
+    authorize! :access, :audit_log
     @versions = PaperTrail::Version.order(created_at: :desc)
   end
   

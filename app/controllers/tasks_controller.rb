@@ -1,4 +1,7 @@
 class TasksController < ApplicationController
+
+  load_and_authorize_resource
+
   before_action :set_project, only: [:index, :show, :create, :update, :destroy, :update_status]
   before_action :set_task, only: [:show, :update, :update_status, :destroy]
 
@@ -29,6 +32,9 @@ class TasksController < ApplicationController
   end
 
   def update
+
+    authorize! :update, @task
+
     if @task.update(task_params)
       redirect_to @project, notice: 'Task was successfully updated.'
     else
@@ -37,6 +43,10 @@ class TasksController < ApplicationController
   end
 
   def update_status
+   
+
+    authorize! :update, @task
+
     if @task.update(status: params[:status])
       render json: { success: true }
     else

@@ -1,5 +1,6 @@
 class Users::SessionsController < Devise::SessionsController
-  # POST /resource/sign_in
+
+
   def create
     user = User.find_by(email: params[:user][:email])
 
@@ -10,4 +11,7 @@ class Users::SessionsController < Devise::SessionsController
       super
     end
   end
+
+
+
 end

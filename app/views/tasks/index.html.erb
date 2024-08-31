@@ -21,9 +21,15 @@
           <td><%= task.status.humanize %></td>
           <td>
             <!-- Delete form -->
+
+            <% if can? :destroy, Task %>
+
             <%= form_with model: [@project, task], method: :delete, local: true do |form| %>
               <%= form.submit 'Delete', class: 'btn btn-danger', data: { confirm: 'Are you sure you want to delete this task?' } %>
             <% end %>
+
+            <% end %>
+
           </td>
         </tr>
       <% end %>
