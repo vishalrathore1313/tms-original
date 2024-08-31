@@ -23,7 +23,12 @@ class ProjectsController < ApplicationController
     end
   end
 
-
+  def destroy
+    @project = Project.find(params[:id])
+    @project.destroy
+    redirect_to projects_path, notice: 'Project was successfully deleted.'
+  end
+  
 
   # def revert
     # @project = Project.find(params[:id])
