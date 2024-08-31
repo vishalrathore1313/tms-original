@@ -7,6 +7,7 @@
 29 dependecy create
 29 audit and revert
 30 verification error solved  and login 
+31 aug task delete button
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
