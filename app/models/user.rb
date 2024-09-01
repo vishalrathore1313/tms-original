@@ -5,6 +5,7 @@ class User < ApplicationRecord
 
   # Validations
   validates :otp_code, presence: true, on: :otp_verification, if: :verification_pending?
+  validates :timezone, presence: true
 
   # Method to generate OTP and save it to the database
   def generate_otp_code

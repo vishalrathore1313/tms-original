@@ -60,5 +60,16 @@ class Users::RegistrationsController < Devise::RegistrationsController
       end
     end
   end
+
+  # def sign_up_params
+  #   params.require(:user).permit(:email, :password, :password_confirmation, :timezone)
+  # end
+
+  # def account_update_params
+  #   params.require(:user).permit(:email, :password, :password_confirmation, :current_password, :timezone)
+  # end
+
+
+
 end
 

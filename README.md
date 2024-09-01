@@ -11,6 +11,7 @@
 31 aug delete button
 31 apply cancancan
 1 sept assigning task and sending notification mail
+1sept timezone
 
 This README would normally document whatever steps are necessary to get the
 application up and running.

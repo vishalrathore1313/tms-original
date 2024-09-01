@@ -38,13 +38,18 @@
 </head>
 <body>
 
+
 <!-- Navbar -->
 <nav class="navbar navbar-custom">
   <div class="d-flex w-100">
     <!-- User Info on the Left -->
-    <div class="mr-auto d-flex align-items-center">
-      <span class="text-white mx-2">
-        <%= current_user.email %> | <%= current_user.role %>
+    <div class="mr-auto d-flex flex-column align-items-start">
+      <span class="text-white">
+        <%= current_user.email %> |  <%= current_user.role %>
+      </span>
+      
+      <span class="text-white">
+         <%= formatted_time_for_user(current_user) %>
       </span>
     </div>
 
@@ -55,15 +60,14 @@
 
     <!-- Logout and Audit Log on the Right -->
     <div class="ml-auto d-flex align-items-center">
-
-     <% if can?(:access, :audit_log) %>
-      <%= link_to 'Audit Log', audit_log_projects_path, class: 'btn btn-light mx-2' %>
-     <% end %>
-
+      <% if can?(:access, :audit_log) %>
+        <%= link_to 'Audit Log', audit_log_projects_path, class: 'btn btn-light mx-2' %>
+      <% end %>
       <%= link_to 'Logout', destroy_user_session_path, data: { turbo_method: :delete }, class: 'btn btn-light' %>
     </div>
   </div>
 </nav>
+
 
 
   <!-- Form Container -->

@@ -17,6 +17,13 @@
            <%= f.select :role, User::ROLES, {}, class: 'form-control' %>
         </div>
 
+
+        <div class="form-group">
+           <%= f.label :timezone, "Select your timezone" %>
+           <%= f.select :timezone, [['India', 'Asia/Kolkata'], ['USA', 'America/New_York'], ['London', 'Europe/London'], ['Australia', 'Australia/Sydney']], {}, class: "form-control" %>
+        </div>
+
+
         <div class="form-group">
           <%= f.label :password %>
           <%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
