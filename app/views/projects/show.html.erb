@@ -61,6 +61,23 @@
               <%= f.collection_select :dependent_task_id, @project.tasks.where.not(id: @task&.id), :id, :title, { include_blank: 'None' }, class: 'form-control' %>
             </div>
 
+
+            
+             <% if current_user.admin? %>
+             <div class="form-group">
+             <%= f.label :assigned_to, 'Assign To' %>
+             <%= f.collection_select :assigned_to, User.where.not(id: current_user.id), :id, :email, { include_blank: 'Not Assigned' }, class: 'form-control' %>
+             </div>
+             <% elsif current_user.manager? %>
+             <div class="form-group">
+             <%= f.label :assigned_to, 'Assign To' %>
+             <%= f.collection_select :assigned_to, User.team_members, :id, :email, { include_blank: 'Not Assigned' }, class: 'form-control' %>
+             </div>
+             <% else %>
+             <%= f.hidden_field :assigned_to %> <!-- Team members cannot assign tasks -->
+             <% end %>
+
+
             <div class="form-group">
               <%= f.label :status, 'Task Status' %>
               <%= f.hidden_field :status, value: 'backlog' %>

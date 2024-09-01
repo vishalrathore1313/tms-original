@@ -9,6 +9,7 @@
         <th>Title</th>
         <th>Description</th>
         <th>Status</th>
+        <th>Assigned To</th>
         <th>Actions</th>
       </tr>
     </thead>
@@ -20,16 +21,21 @@
           <td><%= task.description %></td>
           <td><%= task.status.humanize %></td>
           <td>
-            <!-- Delete form -->
-
-            <% if can? :destroy, Task %>
-
-            <%= form_with model: [@project, task], method: :delete, local: true do |form| %>
-              <%= form.submit 'Delete', class: 'btn btn-danger', data: { confirm: 'Are you sure you want to delete this task?' } %>
+            <%= form_with(model: task, url: project_task_path(@project, task), method: :patch, local: true, class: 'd-inline') do |f| %>
+              <%= f.collection_select :assigned_to, 
+                    current_user.admin? ? User.where.not(id: current_user.id) : User.team_members,
+                    :id, :email, 
+                    { include_blank: 'Not Assigned' }, 
+                    { class: 'form-control', onchange: 'this.form.submit();' } 
+              %>
             <% end %>
-
+          </td>
+          <td>
+            <% if can?(:destroy, task) %>
+              <%= form_with model: [@project, task], method: :delete, local: true do |form| %>
+                <%= form.submit 'Delete', class: 'btn btn-danger', data: { confirm: 'Are you sure you want to delete this task?' } %>
+              <% end %>
             <% end %>
-
           </td>
         </tr>
       <% end %>

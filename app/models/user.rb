@@ -48,6 +48,18 @@ class User < ApplicationRecord
     role == 'team_member'
   end
 
+  scope :team_members, -> { where(role: 'team_member') }
+
+  # Alternatively, if you have a method to check if a user is a team member:
+  def self.team_members
+    where(role: 'team_member')
+  end
+
+
+    # enum role: { admin: 0, manager: 1, team_member: 2 }
+  
+  
+
   private
 
   def verification_pending?

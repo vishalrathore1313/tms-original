@@ -1,0 +1,15 @@
+
+
+<h1>New Task Assigned</h1>
+<p>Hello <%= @assigned_user.email %> | <%= @assigned_user.role %> |</p>
+
+<p>You have been assigned a new task in the project "<%= @project.title %>":</p>
+
+<p><strong>Task:</strong> <%= @task.id %></p>
+<p><strong>Task:</strong> <%= @task.title %></p>
+<p><strong>Description:</strong> <%= @task.description %></p>
+<p><strong>Assigned By:</strong> <%= @assigned_by.email %> |<%= @assigned_by.role %>|</p>
+
+<p>Please log in to view more details and start working on the task.</p>
+
+<p>Best regards,<br>Your Team</p>

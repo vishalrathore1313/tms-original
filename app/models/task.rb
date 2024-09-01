@@ -1,6 +1,8 @@
 class Task < ApplicationRecord
   belongs_to :project
 
+  belongs_to :assigned_user, class_name: 'User', optional: true
+
   has_paper_trail
 
   belongs_to :dependent_task, class_name: 'Task', optional: true
@@ -8,6 +10,7 @@ class Task < ApplicationRecord
   has_many :dependent_tasks, class_name: 'Task', foreign_key: 'dependent_task_id'
 
   validate :dependency_not_self 
+  
   validate :dependencies_completed,on: :update
 
   enum status: { backlog: 'Backlog', in_progress: 'In_progress', completed: 'Completed'}
