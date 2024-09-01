@@ -1,0 +1,32 @@
+
+
+<h2>Create a New Meeting</h2>
+
+<%= form_with model: @meeting, local: true do |f| %>
+  <div class="form-group">
+    <%= f.label :topic %>
+    <%= f.text_field :topic, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :time %>
+    <%= f.datetime_select :time, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :user_ids, "Select Participants" %>
+    <%= f.collection_select :user_ids, @users, :id, :email, {}, { multiple: true, class: "form-control" } %>
+  </div>
+
+  <%= f.submit "Create Meeting", class: "btn btn-primary" %>
+<% end %>
+
+<h3>Past Meetings</h3>
+<% @meetings.each do |meeting| %>
+  <p>
+    <strong>Topic:</strong> <%= meeting.topic %> <br>
+    <strong>Time:</strong> <%= formatted_time_for_user(meeting.time) %> <br>
+    <strong>Status:</strong> <%= meeting.status %> <br>
+    <strong>Participants:</strong> <%= meeting.users.map(&:email).join(", ") %>
+  </p>
+<% end %>

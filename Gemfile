@@ -20,6 +20,8 @@ gem 'paper_trail'
 
 gem 'cancancan', '~> 3.0'
 
+gem 'rspec-rails', '~> 5.0'
+
 
 # gem 'bootstrap-sass'
 

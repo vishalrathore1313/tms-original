@@ -1,20 +1,5 @@
 module ApplicationHelper
 
-    def country_name_for_timezone(timezone)
-      case timezone
-      when "Asia/Kolkata"
-        "India"
-      when "America/New_York"
-        "USA"
-      when "Europe/London"
-        "London"
-      when "Australia/Sydney"
-        "Australia"
-      else
-        "Unknown"
-      end
-    end
-
     TIMEZONE_COUNTRY_MAP = {
         'Asia/Kolkata' => 'India',
         'America/New_York' => 'USA',

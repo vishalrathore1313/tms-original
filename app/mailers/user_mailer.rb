@@ -20,6 +20,15 @@ class UserMailer < ApplicationMailer
       subject: "New Task Assigned: #{@task.title}"
     )
   end
+
+
+  def invite(user, meeting)
+    @user = user
+    @meeting = meeting
+    mail(to: @user.email, subject: "Invitation to Meeting: #{@meeting.topic}")
+  end
+
+
 end
 
 
