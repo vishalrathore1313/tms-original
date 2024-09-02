@@ -19,6 +19,7 @@ class Ability
       can :read, Project    # Team members can read Projects
       can :manage, Task   # Team members can create Tasks
       cannot :destroy, Task  # Team members cannot destroy Projects
+      cannot :destroy, Meeting  # Team members cannot destroy Projects
       
     end
     

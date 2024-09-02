@@ -25,6 +25,7 @@ class UserMailer < ApplicationMailer
   def invite(user, meeting)
     @user = user
     @meeting = meeting
+    @meeting_time=  meeting.time.in_time_zone(@user.timezone).strftime("%Y-%m-%d %I:%M %p")
     mail(to: @user.email, subject: "Invitation to Meeting: #{@meeting.topic}")
   end
 

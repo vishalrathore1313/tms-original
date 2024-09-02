@@ -1,4 +1,5 @@
 class Meeting < ApplicationRecord
+  
     has_many :meeting_participants
     has_many :users, through: :meeting_participants
   

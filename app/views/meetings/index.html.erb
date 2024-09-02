@@ -1,7 +1,14 @@
+
+<%# index.html.erb %>
+
+
 <div class="container my-5">
   <div class="row">
     <div class="col-md-8 offset-md-2">
-      
+
+
+  <% if can? :destroy,Meeting %>
+
       <!-- Create Meeting Form -->
       <div class="card bg-light mb-4">
         <div class="card-header bg-secondary text-white">
@@ -20,35 +27,38 @@
             </div>
 
             <div class="form-group">
-            <%= f.label :user_ids, "Select Participants" %>
-            <%= f.collection_select :user_ids, @users, :id, :email, {}, { multiple: true, class: "form-control", size: 5 } %>
-          </div>
-          
-          
+              <%= f.label :user_ids, "Select Participants" %>
+              <%= f.collection_select :user_ids, @users, :id, :email, {}, { multiple: true, class: "form-control", size: 5 } %>
+            </div>
 
             <%= f.submit "Create Meeting", class: "btn btn-primary" %>
           <% end %>
         </div>
       </div>
 
+ <% end %>
+
       <!-- Past and Future Meetings List -->
       <div class="card bg-light">
-      <div class="card-header bg-secondary text-white">
-        <h3>Past and Future Meetings</h3>
+        <div class="card-header bg-secondary text-white">
+          <h3>All Meetings</h3>
+        </div>
+        <div class="card-body">
+          <% @meetings.each do |meeting| %>
+            <div class="mb-3 p-3 bg-light border">
+              <p><strong>Topic:</strong> <%= meeting.topic %></p>
+              <p><strong>Time:</strong> <%= meeting.time.in_time_zone(current_user.timezone).strftime("%Y-%m-%d %I:%M %p") %></p>
+               <p><strong>Status:</strong> <%= meeting.time > Time.current ? 'Upcoming' : 'Finished' %></p>
+              <p><strong>Participants:</strong> <%= meeting.users.map(&:email).join(", ") %></p>
+            </div>
+          <% end %>
+        </div>
       </div>
-      <div class="card-body">
-        <% @meetings.each do |meeting| %>
-          <div class="mb-3 p-3 bg-light border">
-            <p><strong>Topic:</strong> <%= meeting.topic %></p>
-            <p><strong>Time:</strong> <%= formatted_time_for_user(meeting.time) %></p>
-            <p><strong>Status:</strong> <%= meeting.time > Time.current ? 'Upcoming' : 'Finished' %></p>
-            <p><strong>Participants:</strong> <%= meeting.users.map(&:email).join(", ") %></p>
-          </div>
-        <% end %>
-      </div>
-    </div>
-    
 
     </div>
   </div>
 </div>
+
+
+
+

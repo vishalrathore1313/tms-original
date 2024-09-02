@@ -1,5 +1,4 @@
 
-
 class Users::RegistrationsController < Devise::RegistrationsController
   before_action :check_existing_user, only: [:create]
 
