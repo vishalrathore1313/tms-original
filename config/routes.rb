@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  # get 'home/index'
 
 
   devise_for :users, controllers: {
@@ -10,21 +9,17 @@ Rails.application.routes.draw do
 
   devise_scope :user do
 
-  # root 'devise/sessions#new' 
-  # root 'home#index' 
-
   post 'verify_otp', to: 'users/registrations#verify_otp',as: 'verify_otp'
 
   get 'otp_verification', to: 'users/registrations#otp_verification',as: :otp_verification
 
-  post 'resend_otp', to: 'users/registrations#resend_otp',as: 'resend_otp'
+  # post 'resend_otp', to: 'users/registrations#resend_otp',as: 'resend_otp'
 
   get '/users/sign_out' => 'devise/sessions#destroy'
 
+  get 'audit_log', to: 'projects#audit_log' 
 
-  get 'audit_log', to: 'projects#audit_log' # Adjust the controller and action name as necessary
-
-  post 'revert_version/:id/:version_id', to: 'projects#revert_version', as: 'revert_version'
+  # post 'revert_version/:id/:version_id', to: 'projects#revert_version', as: 'revert_version'
 
   end
 
@@ -43,22 +38,19 @@ resources :projects do
     get 'audit_log'
   end
 
-  member do
-    patch 'revert'
-  end
+  # member do
+  #   patch 'revert'
+  # end
 
-  member do
-    get 'revert'
-  end
+  # member do
+  #   get 'revert'
+  # end
 end
 
 
 resources :tasks
 
 resources :meetings, only: [:index, :create]
-
-
-
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

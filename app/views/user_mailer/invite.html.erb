@@ -7,10 +7,14 @@
   <body>
     <h1>Invitation to Meeting: <%= @meeting.topic %></h1>
     <p>Hello <%= @user.email %>,</p>
-    <p>You are invited to a meeting.</p>
-    <p><strong>Topic:</strong> <%= @meeting.topic %></p>
-    <p><strong>Time:</strong> <%= @meeting_time%></p>
-    <p>We hope to see you there!</p>
+
+<p>You have been invited to a meeting.</p>
+
+<p><strong>Meeting Topic:</strong> <%= @meeting.topic %></p>
+<p><strong>Meeting Time:</strong> <%= @meeting_time %></p>
+
+<p>We look forward to your participation.</p>
+
   </body>
 </html>
 

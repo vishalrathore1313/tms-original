@@ -1,7 +1,10 @@
 
 class UserMailer < ApplicationMailer
 
+  include ApplicationHelper
+
   default from: "vishalrathore1319992@gmail.com"
+
 
   def send_otp
     @user = params[:user]
@@ -25,8 +28,8 @@ class UserMailer < ApplicationMailer
   def invite(user, meeting)
     @user = user
     @meeting = meeting
-    @meeting_time=  meeting.time.in_time_zone(@user.timezone).strftime("%Y-%m-%d %I:%M %p")
-    mail(to: @user.email, subject: "Invitation to Meeting: #{@meeting.topic}")
+    @meeting_time = formatted_time_for_user(@user, @meeting.time)
+    mail(to: @user.email, subject: "You're invited to a meeting")
   end
 
 

@@ -5,6 +5,7 @@ class User < ApplicationRecord
 
  has_many :meeting_participants, dependent: :destroy
  has_many :meetings, through: :meeting_participants
+ 
 
   # Validations
   validates :otp_code, presence: true, on: :otp_verification, if: :verification_pending?

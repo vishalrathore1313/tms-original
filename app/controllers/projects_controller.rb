@@ -33,12 +33,6 @@ class ProjectsController < ApplicationController
   end
   
 
-  # def revert
-    # @project = Project.find(params[:id])
-  #   @version = @project.versions.find(params[:version_id])
-  #   @version.reify.save! # Revert to the selected version
-  #   redirect_to projects_path, notice: "Reverted to previous version."
-  # end
   
   def revert
     @project = Project.find(params[:id])
