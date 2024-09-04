@@ -60,11 +60,6 @@ class User < ApplicationRecord
     where(role: 'team_member')
   end
 
-
-    # enum role: { admin: 0, manager: 1, team_member: 2 }
-  
-  
-
   private
 
   def verification_pending?

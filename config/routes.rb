@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
 
+  root 'projects#index'
+
+
   devise_for :users, controllers: {
     sessions: 'users/sessions',
     registrations: 'users/registrations'
@@ -13,18 +16,13 @@ Rails.application.routes.draw do
 
   get 'otp_verification', to: 'users/registrations#otp_verification',as: :otp_verification
 
-  # post 'resend_otp', to: 'users/registrations#resend_otp',as: 'resend_otp'
-
   get '/users/sign_out' => 'devise/sessions#destroy'
 
   get 'audit_log', to: 'projects#audit_log' 
 
-  # post 'revert_version/:id/:version_id', to: 'projects#revert_version', as: 'revert_version'
-
   end
 
 
-  root 'projects#index'
  
 resources :projects do
   
@@ -38,13 +36,6 @@ resources :projects do
     get 'audit_log'
   end
 
-  # member do
-  #   patch 'revert'
-  # end
-
-  # member do
-  #   get 'revert'
-  # end
 end
 
 

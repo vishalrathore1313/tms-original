@@ -9,7 +9,8 @@
       </span>
       
       <span class="text-white">
-         <%= formatted_time_for_user(current_user) %>
+      <%= formatted_time_for_user(current_user, @project.created_at) %>
+
       </span>
     </div>
 
